@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\debasish\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-171b5e7612621801481645d46d286605ba7cd59b.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-d5a9e19bde240f04384d171dda9fd47260733854.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\libs\Parse-1.5.1.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="3d645417e7780d44f32e29a3ec6b729b75aef26c">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\Parse-1.5.1-9b5220b347e33db44c023b97cd868e209b7e3675.jar" />
+    </item>
+
+</items>
