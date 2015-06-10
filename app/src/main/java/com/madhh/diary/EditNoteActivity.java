@@ -207,7 +207,7 @@ public class EditNoteActivity extends ActionBarActivity {
 	}
 	public void saveData(){
 		BaseTable baseTable = new BaseTable();
-		baseTable.setTime(getToday());
+		//baseTable.setTime(getToday());
 		//baseTable.addEvent(1);
 		baseTable.saveInBackground();
 
@@ -255,7 +255,7 @@ public class EditNoteActivity extends ActionBarActivity {
 					String dbDate = a.getString("date");
 					System.out.println(dbDate);
 					if (today.equals(dbDate)) {
-						BaseTable baseTable = new BaseTable(a.getObjectId(), a.getString("date"));
+						//BaseTable baseTable = new BaseTable(a.getObjectId(), a.getString("date"));
 						//parentObj.add(baseTable);
 						saveRelData(a);
 						Toast.makeText(getApplicationContext(), parentObj.toString(), Toast.LENGTH_LONG).show();

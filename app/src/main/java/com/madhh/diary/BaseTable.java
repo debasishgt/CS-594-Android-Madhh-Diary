@@ -5,8 +5,12 @@ import com.parse.ParseObject;
 import android.text.format.Time;
 
 import com.parse.ParseClassName;
+import com.parse.ParseUser;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * Created by debasish on 6/8/2015.
@@ -14,29 +18,43 @@ import java.util.Arrays;
 @ParseClassName("BaseTable")
 public class BaseTable extends ParseObject {
 
-    //Time time;
-    int[] events;
     String objectId;
-    public BaseTable(){}
-    public BaseTable(String objectId, String date){
-        setTime(date);
-        setObjectId(objectId);
+    private String date;
+    private String username;
+
+    public BaseTable(){
+        setDate();
+        setUsername(ParseUser.getCurrentUser().getUsername());
     }
     public void setObjectId(String objectId){
         this.objectId = objectId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+        put("username", this.username);
     }
     public Time getDate() {
         //return time;
         return null;
     }
-    public void setTime(String dateStr) {
-        //time = new Time();
-        //time.setToNow();
-        put("date", dateStr);
+    public void setDate() {
+        this.date = getToday();
+        put("date", this.date);
     }
-
     public void addEvent(int event){
         addAll("events", Arrays.asList(event));
         //put("events", event);
+    }
+    public String getToday(){
+        DateFormat dateFormat = new SimpleDateFormat("MMM/dd/yyyy");
+        Date date = new Date();
+        String dateStr = dateFormat.format(date);
+
+        return dateStr;
     }
 }

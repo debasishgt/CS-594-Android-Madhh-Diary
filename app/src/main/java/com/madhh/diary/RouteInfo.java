@@ -15,37 +15,21 @@ import java.util.Date;
  * Created by debasish on 6/10/2015.
  */
 @ParseClassName("RouteInfo")
-public class RouteInfo extends ParseObject {
+public class RouteInfo extends BaseTable {
 
-    private String date;
+
     private ArrayList<ParseGeoPoint> parseGeoPoints;
 
     private ParseGeoPoint startPoint;
     private ParseGeoPoint stopPoint;
 
-    private String username;
+
 
     public RouteInfo(){
-        setDate();
-        setUsername(ParseUser.getCurrentUser().getUsername());
+        super();
     };
 
-    public String getUsername() {
-        return username;
-    }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate() {
-        this.date = getToday();
-        put("date", this.date);
-    }
 
     public ArrayList<ParseGeoPoint> getParseGeoPoint() {
         return parseGeoPoints;
@@ -66,6 +50,7 @@ public class RouteInfo extends ParseObject {
 
     public void setStartPoint(ParseGeoPoint startPoint) {
         this.startPoint = startPoint;
+        put("startPoint", this.startPoint);
     }
 
     public ParseGeoPoint getStopPoint() {
@@ -74,14 +59,9 @@ public class RouteInfo extends ParseObject {
 
     public void setStopPoint(ParseGeoPoint stopPoint) {
         this.stopPoint = stopPoint;
+        put("stopPoint", this.stopPoint);
     }
 
-    public String getToday(){
-        DateFormat dateFormat = new SimpleDateFormat("MMM/dd/yyyy");
-        Date date = new Date();
-        String dateStr = dateFormat.format(date);
 
-        return dateStr;
-    }
 }
 
