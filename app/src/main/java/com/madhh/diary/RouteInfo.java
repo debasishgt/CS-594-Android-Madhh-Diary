@@ -20,9 +20,23 @@ public class RouteInfo extends ParseObject {
     private String date;
     private ArrayList<ParseGeoPoint> parseGeoPoints;
 
+    private ParseGeoPoint startPoint;
+    private ParseGeoPoint stopPoint;
+
+    private String username;
+
     public RouteInfo(){
         setDate();
+        setUsername(ParseUser.getCurrentUser().getUsername());
     };
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public String getDate() {
         return date;
@@ -45,6 +59,23 @@ public class RouteInfo extends ParseObject {
     public void saveRouteInfo() {
         put("route", parseGeoPoints);
     }
+
+    public ParseGeoPoint getStartPoint() {
+        return startPoint;
+    }
+
+    public void setStartPoint(ParseGeoPoint startPoint) {
+        this.startPoint = startPoint;
+    }
+
+    public ParseGeoPoint getStopPoint() {
+        return stopPoint;
+    }
+
+    public void setStopPoint(ParseGeoPoint stopPoint) {
+        this.stopPoint = stopPoint;
+    }
+
     public String getToday(){
         DateFormat dateFormat = new SimpleDateFormat("MMM/dd/yyyy");
         Date date = new Date();
