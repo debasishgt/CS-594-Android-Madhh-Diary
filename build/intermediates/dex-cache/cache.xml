@@ -2,11 +2,109 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\debasish\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.3.0\classes.jar"
         jumboMode="false"
         revision="22.0.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-171b5e7612621801481645d46d286605ba7cd59b.jar" />
+        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-92f60de7aeaabc49db085aa9fb488168d70df4b0.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-dc8c5b2657f3579bf2edc17d977940c00fa569bd.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-29f58d55e3ea64aca6f9d172a904179bb77fc4a1.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-d23f070dbcf064d20920d6316f0b73ef6b9e4d41.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-d6da5eb2e4f894676b9aa1dd4986d46450c9107c.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-e3a42876b6fae52a7c805c26dd3d805af3b39152.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-b081767b3024b6a731c52909122dd37bafd87a2e.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-af37397999112a2875d69ac92b899c587ee420cc.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-b81e21519cbfdd6ac7618fbef0ba85190603fc4b.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-2f4b62bb26367d68e8179e1d0304eaddf1cf53db.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-69b7c0a576851070d7cc9c4304cdd30b6043c865.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\libs\Parse-1.5.1.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="3d645417e7780d44f32e29a3ec6b729b75aef26c">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\Parse-1.5.1-9b5220b347e33db44c023b97cd868e209b7e3675.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-1a7d5c9aa0f0c17b1fb454d1def37d1252a33595.jar" />
+    </item>
+    <item
+        jar="C:\Users\debasish\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-aa3fcffbff75c8dcc12a45298ce5289cdb1ced16.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-00358d2a71bbe61a9983265ec5bd5c82d9952750.jar" />
     </item>
     <item
         jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
@@ -16,11 +114,67 @@
         <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-d5a9e19bde240f04384d171dda9fd47260733854.jar" />
     </item>
     <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\libs\Parse-1.5.1.jar"
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.3.0\classes.jar"
         jumboMode="false"
         revision="22.0.0"
-        sha1="3d645417e7780d44f32e29a3ec6b729b75aef26c">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\Parse-1.5.1-9b5220b347e33db44c023b97cd868e209b7e3675.jar" />
+        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-556d7c160048f6a0cc61874d75f5460daf662a81.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-0ae29120327c64e40e3a275a9e52f9e840a9948f.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="565a01f90f1529f73362707c4c185d0623a68782">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-1ff2aad9f5bfe7bd7f0bf1c41389b9cec908c460.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-31f8294ec668e8b4feb395c561d8b09a9e38d2d3.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-c6cd61aeba759395ac8e51d87d78df85dacdfe08.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-3b5277bd71ecfafa70ebdba823f77c56b5aacaff.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-0ad19727a543df3c0d128e6cca3f167a972c670c.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-8f8fb0d3731885dfb44a8f1586d857620d173885.jar" />
+    </item>
+    <item
+        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-878d59cf26bd74f1c309640bc1651dd0386126f2.jar" />
     </item>
 
 </items>

@@ -1,12 +1,10 @@
 package com.echessa.noteapp;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 import android.app.ListActivity;
 import android.content.Intent;
-import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -18,7 +16,6 @@ import android.widget.ListView;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
-import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
@@ -89,6 +86,19 @@ public class MainActivity extends ListActivity {
 			// Do something when user selects Settings from Action Bar overlay
 			break;
 		}
+
+		case R.id.action_pic: {
+			Intent picIntent = new Intent(this, PicActivity.class);
+			startActivity(picIntent);
+			// Do something when user selects Settings from Action Bar overlay
+			break;
+		}
+			case R.id.action_map: {
+				Intent mapIntent = new Intent(this, MapActivity.class);
+				startActivity(mapIntent);
+				// Do something when user selects Settings from Action Bar overlay
+				break;
+			}
 		}
 
 		return super.onOptionsItemSelected(item);
@@ -134,9 +144,7 @@ public class MainActivity extends ListActivity {
 
 					Log.d(getClass().getSimpleName(), "Error: " + e.getMessage());
 				}
-
 			}
-
 		});
 
 	}

@@ -2,25 +2,41 @@ package com.echessa.noteapp;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.location.LocationListener;
+import android.media.ExifInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.text.format.Time;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class EditNoteActivity extends ActionBarActivity {
 	
@@ -30,6 +46,9 @@ public class EditNoteActivity extends ActionBarActivity {
 	private String postTitle;
 	private String postContent;
 	private Button saveNoteButton;
+	private ArrayList<BaseTable> parentObj;
+	private FileInputStream fis = null;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +61,9 @@ public class EditNoteActivity extends ActionBarActivity {
 		
 		titleEditText = (EditText) findViewById(R.id.noteTitle);
 		contentEditText = (EditText) findViewById(R.id.noteContent);
-		
+
+		parentObj = new ArrayList<BaseTable>();
+
 		if (intent.getExtras() != null) {
 			note = new Note(intent.getStringExtra("noteId"), intent.getStringExtra("noteTitle"), intent.getStringExtra("noteContent"));
 			
@@ -158,7 +179,150 @@ public class EditNoteActivity extends ActionBarActivity {
 				.setTitle(R.string.edit_error_title)
 				.setPositiveButton(android.R.string.ok, null);
 			AlertDialog dialog = builder.create();
-			dialog.show();			
+			dialog.show();
+			//Save Data
+			//saveData();
+			//Edit Array
+			//getBaseTableData();
+			//Save Relational Data - Parent Child Data
+			//saveRelData();
+			getParentObj();
 		}
+	}
+	public String getToday(){
+		DateFormat dateFormat = new SimpleDateFormat("MMM/dd/yyyy");
+		Date date = new Date();
+		String dateStr = dateFormat.format(date);
+
+		return dateStr;
+	}
+	public void saveData(){
+		BaseTable baseTable = new BaseTable();
+		baseTable.setTime(getToday());
+		//baseTable.addEvent(1);
+		baseTable.saveInBackground();
+
+	}
+	public void saveRelData(BaseTable btt){
+		EventBase eventBase = new EventBase();
+		eventBase.saveTitle("testTitle11");
+		eventBase.saveMemo("testMemo22");
+		try {
+			eventBase.save();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		//getParentObj();
+		// now we create a book object
+		//ParseObject baseTable = new ParseObject("BaseTable");
+
+// now let�s associate the authors with the book
+// remember, we created a "authors" relation on Book
+		System.out.println("dw");
+		if(parentObj != null && parentObj.size() > 0) {
+			//BaseTable btt = parentObj.get(0);
+			Toast.makeText(getApplicationContext(), "Succ", Toast.LENGTH_LONG).show();
+
+			ParseRelation<ParseObject> relation = btt.getRelation("event_bases");
+			relation.add(eventBase);
+			//eventBase.setParent(btt);
+
+			btt.saveInBackground();
+		}
+	}
+	public void getParentObj() {
+
+		ParseQuery<BaseTable> query = ParseQuery.getQuery(BaseTable.class);
+		//query.whereEqualTo("date", ParseUser.getCurrentUser().get("date"));
+		//query.whereEqualTo("date", getToday());
+		query.findInBackground(new FindCallback<BaseTable>() {
+			@Override
+			public void done(List<BaseTable> results, ParseException e) {
+				for (BaseTable a : results) {
+					// ...
+					//Toast.makeText(getApplicationContext(), "In getParentObj", Toast.LENGTH_LONG).show();
+					String today = getToday();
+					System.out.println(today);
+					String dbDate = a.getString("date");
+					System.out.println(dbDate);
+					if (today.equals(dbDate)) {
+						BaseTable baseTable = new BaseTable(a.getObjectId(), a.getString("date"));
+						//parentObj.add(baseTable);
+						saveRelData(a);
+						Toast.makeText(getApplicationContext(), parentObj.toString(), Toast.LENGTH_LONG).show();
+					}
+				}
+			}
+		});
+	}
+
+	public void getBaseTableData(){
+		ParseQuery<BaseTable> query = ParseQuery.getQuery(BaseTable.class);
+		//query.whereEqualTo("date", ParseUser.getCurrentUser().get("date"));
+		query.whereEqualTo("date", getToday());
+		query.findInBackground(new FindCallback<BaseTable>() {
+			@Override
+			public void done(List<BaseTable> results, ParseException e) {
+				Toast.makeText(getApplicationContext(), "this is my Toast message!!! =)", Toast.LENGTH_LONG).show();
+				for (BaseTable a : results) {
+					// ...
+					ArrayList<Integer> events = new ArrayList<Integer>();
+					events = (ArrayList<Integer>)a.get("events");
+					events.add(23);
+					a.put("events", events);
+					//a.addEvent(22);
+					Toast.makeText(getApplicationContext(), "this is my Toast message22!!! =)", Toast.LENGTH_LONG).show();
+					a.saveInBackground();
+				}
+			}
+		});
+	}
+	public void picProcess(){
+		try{
+			String path = "/sdcard/testimage.jpg";
+			Bitmap b = BitmapFactory.decodeFile(path);
+			ExifInterface exif = new ExifInterface(path);
+			String datetime = getTagString(ExifInterface.TAG_DATETIME, exif);
+			//String flash = exif.getAttribute(ExifInterface.TAG_FLASH);
+			String gps_latitude = getTagString(ExifInterface.TAG_GPS_LATITUDE, exif);
+			//String gps_latitude_ref = getTagString(ExifInterface.TAG_GPS_LATITUDE_REF, exif);
+			String gps_longitude = getTagString(ExifInterface.TAG_GPS_LONGITUDE, exif);
+			//String gps_longitude_ref = getTagString(ExifInterface.TAG_GPS_LONGITUDE_REF, exif);
+			String img_length = getTagString(ExifInterface.TAG_IMAGE_LENGTH, exif);
+			String img_width = getTagString(ExifInterface.TAG_IMAGE_WIDTH, exif);
+			String make = getTagString(ExifInterface.TAG_MAKE, exif);
+			String model = getTagString(ExifInterface.TAG_MODEL, exif);
+			String orientation = getTagString(ExifInterface.TAG_ORIENTATION, exif);
+			String white_balance = getTagString(ExifInterface.TAG_WHITE_BALANCE, exif);
+
+			fis = new FileInputStream(path);
+			byte[] data = new byte[(int) path.length()];
+			fis.read(data);
+
+			ParseFile file = new ParseFile("image.jpg",data);
+			file.saveInBackground();
+
+			ParseObject imageData = new ParseObject("ImageData");
+			imageData.put("datetime", datetime);
+			imageData.put("gps_latitude", gps_latitude);
+			imageData.put("gps_longitude", gps_longitude);
+			imageData.put("img_length", img_length);
+			imageData.put("img_width", img_width);
+			imageData.put("make", make);
+			imageData.put("model", model);
+			imageData.put("orientation", orientation);
+			imageData.put("white_balance", white_balance);
+			imageData.put("imageFile", file);
+			imageData.saveInBackground();
+
+		}catch (IOException e){
+			e.printStackTrace();
+			Toast.makeText(this, "Error!",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+	private String getTagString(String tag, ExifInterface exif)
+	{
+		return(exif.getAttribute(tag));
 	}
 }
