@@ -13,6 +13,7 @@ import android.widget.ListView;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
+import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
@@ -94,9 +95,21 @@ public class MainActivity extends ListActivity {
 			break;
 		}
 			case R.id.action_map: {
-				Intent mapIntent = new Intent(this, MapActivity.class);
-				startActivity(mapIntent);
+				//Intent mapIntent = new Intent(this, MapActivity.class);
+				//startActivity(mapIntent);
 				// Do something when user selects Settings from Action Bar overlay
+				RouteInfo routeInfo = new RouteInfo();
+				routeInfo.setDate();
+
+				routeInfo.setParseGeoPoint(new ParseGeoPoint(34.13, -118.12));
+				routeInfo.setParseGeoPoint(new ParseGeoPoint(34.14, -118.13));
+				routeInfo.setParseGeoPoint(new ParseGeoPoint(34.15, -118.14));
+				routeInfo.saveRouteInfo();
+				try {
+					routeInfo.save();
+				} catch (ParseException e) {
+					e.printStackTrace();
+				}
 				break;
 			}
 		}

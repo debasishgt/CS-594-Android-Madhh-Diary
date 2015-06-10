@@ -12,8 +12,8 @@ public class NoteAppApplication extends Application {
 		super.onCreate();
 		ParseObject.registerSubclass(EventBase.class);
 		ParseObject.registerSubclass(BaseTable.class);
-		//ParseObject.registerSubclass(EventBase.class);
-		Parse.initialize(this, "ZWM5rHWPSPQNZdEn5Rh0qtJ4Z5MOG3sK0CZ4k2HX", "RSidu4Jlrxu809Kj5guL1RXjJYHd2PN178yTT2lN");
+		ParseObject.registerSubclass(RouteInfo.class);
+		Parse.initialize(this, "EfXd2CSx5Ew3QyG2L9gJnM9IuDsFPqOmwRzMoapJ", "LxwjWMiUCVOhWfuZcu4rNym1Ezx8ypYpIxx1GMib");
 
 //		ParseObject testObject = new ParseObject("TestObject");
 //		testObject.put("foo", "bar");

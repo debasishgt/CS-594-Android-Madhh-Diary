@@ -1,0 +1,56 @@
+package com.madhh.diary;
+
+import com.parse.ParseClassName;
+import com.parse.ParseGeoPoint;
+import com.parse.ParseObject;
+import com.parse.ParseUser;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+
+/**
+ * Created by debasish on 6/10/2015.
+ */
+@ParseClassName("RouteInfo")
+public class RouteInfo extends ParseObject {
+
+    private String date;
+    private ArrayList<ParseGeoPoint> parseGeoPoints;
+
+    public RouteInfo(){
+        setDate();
+    };
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate() {
+        this.date = getToday();
+        put("date", this.date);
+    }
+
+    public ArrayList<ParseGeoPoint> getParseGeoPoint() {
+        return parseGeoPoints;
+    }
+
+    public void setParseGeoPoint(ParseGeoPoint parseGeoPoint) {
+        if(parseGeoPoints == null)
+            parseGeoPoints = new ArrayList<ParseGeoPoint>();
+        this.parseGeoPoints.add(parseGeoPoint);
+    }
+    public void saveRouteInfo() {
+        put("route", parseGeoPoints);
+    }
+    public String getToday(){
+        DateFormat dateFormat = new SimpleDateFormat("MMM/dd/yyyy");
+        Date date = new Date();
+        String dateStr = dateFormat.format(date);
+
+        return dateStr;
+    }
+}
+
