@@ -1,9 +1,14 @@
 package com.madhh.diary;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+
+import android.location.Location;
+import android.location.LocationManager;
+//>>>>>>> Stashed changes:app/src/main/java/com/echessa/noteapp/EditNoteActivity.java
 import android.media.ExifInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -20,6 +25,7 @@ import com.parse.FindCallback;
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseRelation;
@@ -41,18 +47,24 @@ public class EditNoteActivity extends ActionBarActivity {
 	private EditText contentEditText;
 	private String postTitle;
 	private String postContent;
+	private ParseGeoPoint postGeoPoint;
 	private Button saveNoteButton;
 	private ArrayList<BaseTable> parentObj;
 	private FileInputStream fis = null;
 
-
+	protected LocationManager locationManager;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		setContentView(R.layout.activity_edit_note);
-		
+
+		//
+		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+		//
 		Intent intent = this.getIntent();
 		
 		titleEditText = (EditText) findViewById(R.id.noteTitle);
@@ -61,7 +73,7 @@ public class EditNoteActivity extends ActionBarActivity {
 		parentObj = new ArrayList<BaseTable>();
 
 		if (intent.getExtras() != null) {
-			note = new Note(intent.getStringExtra("noteId"), intent.getStringExtra("noteTitle"), intent.getStringExtra("noteContent"));
+			note = new Note(intent.getStringExtra("noteId"), intent.getStringExtra("noteTitle"), intent.getStringExtra("noteContent"), getLocation());
 			
 			titleEditText.setText(note.getTitle());
 			contentEditText.setText(note.getContent());
@@ -103,6 +115,7 @@ public class EditNoteActivity extends ActionBarActivity {
 		
 		postTitle = postTitle.trim();
 		postContent = postContent.trim();
+		postGeoPoint = getLocation();
 		
 		// If user doesn't enter a title or content, do nothing
 		// If user enters title, but no content, save
@@ -120,14 +133,14 @@ public class EditNoteActivity extends ActionBarActivity {
 				post.put("title", postTitle);
 				post.put("content", postContent);
 				post.put("author", ParseUser.getCurrentUser());
-				//post.put("geoPoint", );
+				post.put("geoPoint",postGeoPoint);
 				setProgressBarIndeterminateVisibility(true);
 				post.saveInBackground(new SaveCallback() {
 		            public void done(ParseException e) {
 		            	setProgressBarIndeterminateVisibility(false);
 		                if (e == null) {
 		                    // Saved successfully.
-		                	note = new Note(post.getObjectId(), postTitle, postContent);
+		                	note = new Note(post.getObjectId(), postTitle, postContent,postGeoPoint);
 		                	Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_SHORT).show();
 		                } else {
 		                    // The save failed.
@@ -321,4 +334,15 @@ public class EditNoteActivity extends ActionBarActivity {
 	{
 		return(exif.getAttribute(tag));
 	}
+	
+		//start
+
+	public ParseGeoPoint getLocation()
+	{
+		Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+		postGeoPoint = new ParseGeoPoint(location.getLatitude(), location.getLongitude());
+		return postGeoPoint;
+	}
+
+	//end
 }

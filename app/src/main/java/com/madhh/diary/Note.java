@@ -7,22 +7,22 @@ public class Note {
 	private String id;
 	private String title;
 	private String content;
-    private ParseGeoPoint parseGeoPoint;
+    private ParseGeoPoint geoPoint;
 	
-	Note(String noteId, String noteTitle, String noteContent) {
+	Note(String noteId, String noteTitle, String noteContent, ParseGeoPoint Point) {
 		id = noteId;
 		title = noteTitle;
 		content = noteContent;
-		
+		geoPoint = Point;
 	}
 
-    public void setParseGeoPoint(ParseGeoPoint parseGeoPoint) {
-        this.parseGeoPoint = parseGeoPoint;
+    public void setGeoPoint(ParseGeoPoint geoPoint) {
+        this.geoPoint = geoPoint;
     }
 
-    public ParseGeoPoint getParseGeoPoint() {
+    public ParseGeoPoint getGeoPoint() {
 
-        return parseGeoPoint;
+        return geoPoint;
     }
 
     public String getId() {

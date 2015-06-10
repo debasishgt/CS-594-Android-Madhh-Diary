@@ -1,8 +1,5 @@
 package com.madhh.diary;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,6 +16,9 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends ListActivity {
 
@@ -135,7 +135,7 @@ public class MainActivity extends ListActivity {
 					posts.clear();
 					for (ParseObject post : postList) {
 						Note note = new Note(post.getObjectId(), post
-								.getString("title"), post.getString("content"));
+								.getString("title"), post.getString("content"), post.getParseGeoPoint("parseGeoPoint"));
 						posts.add(note);
 					}
 					((ArrayAdapter<Note>) getListAdapter())

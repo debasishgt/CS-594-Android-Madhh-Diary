@@ -2,179 +2,179 @@
 <items version="2" >
 
     <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-92f60de7aeaabc49db085aa9fb488168d70df4b0.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.3.0\classes.jar"
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.3.0\classes.jar"
         jumboMode="false"
         revision="22.0.0"
         sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-dc8c5b2657f3579bf2edc17d977940c00fa569bd.jar" />
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-c6533e05241ed941468db13aac3452b9414b3328.jar" />
     </item>
     <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-29f58d55e3ea64aca6f9d172a904179bb77fc4a1.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-d23f070dbcf064d20920d6316f0b73ef6b9e4d41.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-d6da5eb2e4f894676b9aa1dd4986d46450c9107c.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-e3a42876b6fae52a7c805c26dd3d805af3b39152.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-b081767b3024b6a731c52909122dd37bafd87a2e.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-af37397999112a2875d69ac92b899c587ee420cc.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-b81e21519cbfdd6ac7618fbef0ba85190603fc4b.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-2f4b62bb26367d68e8179e1d0304eaddf1cf53db.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-69b7c0a576851070d7cc9c4304cdd30b6043c865.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\libs\Parse-1.5.1.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="3d645417e7780d44f32e29a3ec6b729b75aef26c">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\Parse-1.5.1-9b5220b347e33db44c023b97cd868e209b7e3675.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.3.0\classes.jar"
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.3.0\classes.jar"
         jumboMode="false"
         revision="22.0.0"
         sha1="59652857a825fff0de62166fca1bc9553cc01abb">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-1a7d5c9aa0f0c17b1fb454d1def37d1252a33595.jar" />
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-23493e86447d988a797bc5b3b5fead4dbac6823f.jar" />
     </item>
     <item
-        jar="C:\Users\debasish\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.3.0\classes.jar"
         jumboMode="false"
         revision="22.0.0"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-aa3fcffbff75c8dcc12a45298ce5289cdb1ced16.jar" />
+        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-d0658e6c468e4058bc3e2c9fc8894deb0cccf86b.jar" />
     </item>
     <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.3.0\classes.jar"
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.3.0\classes.jar"
         jumboMode="false"
         revision="22.0.0"
         sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-00358d2a71bbe61a9983265ec5bd5c82d9952750.jar" />
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-0bf2844c60ebe46eed51b833f48a9e0a16089462.jar" />
     </item>
     <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.3.0\classes.jar"
         jumboMode="false"
         revision="22.0.0"
-        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-d5a9e19bde240f04384d171dda9fd47260733854.jar" />
+        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-5b7b9ca1baf6f0dca17eb69ad057765b1edd0c64.jar" />
     </item>
     <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.3.0\classes.jar"
+        jar="C:\Users\genus_000\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
         jumboMode="false"
         revision="22.0.0"
-        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-556d7c160048f6a0cc61874d75f5460daf662a81.jar" />
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-06c3c18255957a4f8515097a696f3bdae0d1af66.jar" />
     </item>
     <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-5b34935b2b6dbcf6734b094f3dfe8f27adee6591.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
         jumboMode="false"
         revision="22.0.0"
         sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-0ae29120327c64e40e3a275a9e52f9e840a9948f.jar" />
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-a3a77ed09a774b984d6e85b0f31fd0db130ad76c.jar" />
     </item>
     <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.3.0\classes.jar"
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.3.0\classes.jar"
         jumboMode="false"
         revision="22.0.0"
-        sha1="565a01f90f1529f73362707c4c185d0623a68782">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-1ff2aad9f5bfe7bd7f0bf1c41389b9cec908c460.jar" />
+        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-5a7600442d255257e8e4d9485ac37c4cbefae500.jar" />
     </item>
     <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-31f8294ec668e8b4feb395c561d8b09a9e38d2d3.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-c6cd61aeba759395ac8e51d87d78df85dacdfe08.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.3.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-3b5277bd71ecfafa70ebdba823f77c56b5aacaff.jar" />
-    </item>
-    <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.3.0\classes.jar"
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.3.0\classes.jar"
         jumboMode="false"
         revision="22.0.0"
         sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-0ad19727a543df3c0d128e6cca3f167a972c670c.jar" />
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-acac838774e287c813e65f231e7e890e144d6528.jar" />
     </item>
     <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.3.0\classes.jar"
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
         jumboMode="false"
         revision="22.0.0"
-        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-8f8fb0d3731885dfb44a8f1586d857620d173885.jar" />
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-1ba499a79e11b4718de9a558a5f27b23f31f9fa4.jar" />
     </item>
     <item
-        jar="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-bc137fad6f4dd2ef481ab8b7d444865570246b4f.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="565a01f90f1529f73362707c4c185d0623a68782">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-2600cf81b4c71913c8b2f6d63722d43e1b5c34b8.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-ac61f3fafa57992a33b99f99fbbc8fa8f421b89d.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-711950c2e37e149e87aa641b90d7b9912e7e9e6e.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-b5749bb1b4d381bafb6d0e98369170e5f803f3bb.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\libs\Parse-1.5.1.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="3d645417e7780d44f32e29a3ec6b729b75aef26c">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\Parse-1.5.1-be6b06d84f6f4cdc4b0527b7188bfea90fa182d2.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-a3ca5444e34c98990a55fba992cddceaa1b92d56.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-4f966ec3bd581f2a1e1b7f4cbdaed03b270fca8e.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-6f901ad491e9b4fa3ff72d056b0515de6bf6e27b.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
         jumboMode="false"
         revision="22.0.0"
         sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="C:\Data_Sector\STUDENT\cs594androidworkspace\BasicNotesParse\master\app\build\intermediates\pre-dexed\debug\classes-878d59cf26bd74f1c309640bc1651dd0386126f2.jar" />
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-bd4fb62bc3af442180b2ba854d1ee34702994782.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-1bcb4d497ec393a476e176e912a4491566dbfdaa.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-87f9c49938cd63a80a4de0668171dfaa5e7db3e0.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-78506b6f9803e7e37ef59959acea048171845dd9.jar" />
+    </item>
+    <item
+        jar="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
+        <dex dex="C:\AndroidStudioProjects\CS-594-Android-Madhh-Diary\app\build\intermediates\pre-dexed\debug\classes-d6bfc8ef6f5cdffb0fa3796010477550559ddf15.jar" />
     </item>
 
 </items>

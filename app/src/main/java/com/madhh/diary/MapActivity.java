@@ -1,22 +1,136 @@
 package com.madhh.diary;
 
-import android.support.v4.app.FragmentActivity;
+import android.content.Context;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.parse.ParseGeoPoint;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MapActivity extends FragmentActivity {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
+    private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 2; // in Meters
+    private static final long MINIMUM_TIME_BETWEEN_UPDATES = 5000; // in Milliseconds
+    protected LocationManager locationManager;
+    protected MyLocationListener myListener;
+//    protected Button locate;
+    protected Button track;
+    protected Button end;
+    public double start_lat;
+    public double start_long;
+    public double end_lat;
+    public double end_long;
+    List<ParseGeoPoint> locationTrace = new ArrayList<ParseGeoPoint>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         setUpMapIfNeeded();
+//        locate = (Button) findViewById(R.id.locate);
+        track = (Button) findViewById(R.id.track);
+        end = (Button) findViewById(R.id.end);
+//        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        showCurrentLocation();
+//        locate.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+//
+//                showCurrentLocation();
+//            }
+//        });
+
+        track.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(locationManager == null) {
+                    System.out.println("LocationManager is null");
+                    locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+                }
+                myListener = new MyLocationListener();
+                startTrack();
+            }
+        });
+
+        end.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                stopTrack();
+                mMap.clear();
+                mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
+                        .getMap();
+//                setUpMapIfNeeded();
+                showCurrentLocation();
+
+            }
+        });
+    }
+
+
+
+    private class MyLocationListener implements LocationListener {
+
+        public void onLocationChanged(Location location) {
+            String message = String.format(
+                    "New Location \n Longitude: %1$s \n Latitude: %2$s",
+                    location.getLongitude(), location.getLatitude()
+            );
+            locationTrace.add(new ParseGeoPoint( location.getLatitude(),location.getLongitude()));
+            end_lat = location.getLatitude();
+            end_long = location.getLongitude();
+            Toast.makeText(MapActivity.this, message, Toast.LENGTH_LONG).show();
+
+        }
+
+        public void onStatusChanged(String s, int i, Bundle b) {
+            Toast.makeText(MapActivity.this, "Provider status changed",
+                    Toast.LENGTH_LONG).show();
+
+        }
+
+        public void onProviderDisabled(String s) {
+            Toast.makeText(MapActivity.this,
+                    "Provider disabled by the user. GPS turned off",
+                    Toast.LENGTH_LONG).show();
+        }
+
+        public void onProviderEnabled(String s) {
+            Toast.makeText(MapActivity.this,
+                    "Provider enabled by the user. GPS turned on",
+                    Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+
+
+    protected void showCurrentLocation() {
+
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+        showInMap(location);
+
     }
 
     @Override
@@ -62,4 +176,79 @@ public class MapActivity extends FragmentActivity {
     private void setUpMap() {
         mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
     }
+
+
+    private void showInMap(Location plot) {
+
+            // Try to obtain the map from the SupportMapFragment.
+            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
+                    .getMap();
+
+        if (plot != null) {
+            String message = String.format(
+                    "Current my Location \n Longitude: %1$s \n Latitude: %2$s",
+                    plot.getLongitude(), plot.getLatitude()
+            );
+
+            Toast.makeText(MapActivity.this, message,
+                    Toast.LENGTH_LONG).show();
+
+            mMap.addMarker(new MarkerOptions().position(new LatLng(plot.getLatitude(), plot.getLongitude())).title("Marker"));
+
+
+            CameraUpdate center= CameraUpdateFactory.newLatLng(new LatLng(plot.getLatitude(), plot.getLongitude()));
+            CameraUpdate zoom= CameraUpdateFactory.zoomTo(15);
+
+            mMap.moveCamera(center);
+            mMap.animateCamera(zoom);
+        }
+    }
+
+    public void startTrack()
+    {
+        Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+
+
+        mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
+                .getMap();
+
+        start_lat=location.getLatitude();
+        start_long=location.getLongitude();
+        locationTrace.add(new ParseGeoPoint(start_lat,start_long));
+        System.out.println(start_lat);
+        System.out.println(start_long);
+
+        mMap.addMarker(new MarkerOptions().position(new LatLng(start_lat, start_long)).title("Marker").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+
+        CameraUpdate center= CameraUpdateFactory.newLatLng(new LatLng(start_lat,start_long));
+        CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
+
+        mMap.moveCamera(center);
+        mMap.animateCamera(zoom);
+
+        //MyLocationListener myListener = new MyLocationListener();
+        locationManager.requestLocationUpdates(
+                LocationManager.GPS_PROVIDER,
+                MINIMUM_TIME_BETWEEN_UPDATES,
+                MINIMUM_DISTANCE_CHANGE_FOR_UPDATES,
+                myListener
+        );
+    }
+
+     public void stopTrack()
+     {
+         locationManager.removeUpdates(myListener);
+         locationManager = null;
+         System.out.println("===================List====" + locationTrace.get(1));
+
+         String message = String.format(
+                 "New Locatio end locationn");
+         Toast.makeText(MapActivity.this, message, Toast.LENGTH_LONG).show();
+     }
+
+
+
+
 }
