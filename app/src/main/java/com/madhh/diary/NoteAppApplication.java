@@ -1,4 +1,4 @@
-package com.echessa.noteapp;
+package com.madhh.diary;
 
 import android.app.Application;
 

@@ -1,16 +1,12 @@
-package com.echessa.noteapp;
+package com.madhh.diary;
 // Armor.java
 import com.parse.ParseObject;
-import com.parse.Parse;
-import android.app.Application;
+
 import android.text.format.Time;
 
 import com.parse.ParseClassName;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Date;
 
 /**
  * Created by debasish on 6/8/2015.

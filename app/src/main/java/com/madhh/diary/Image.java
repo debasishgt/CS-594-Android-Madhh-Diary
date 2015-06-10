@@ -1,6 +1,4 @@
-package com.echessa.noteapp;
-
-import android.media.ExifInterface;
+package com.madhh.diary;
 
 import com.parse.ParseFile;
 import com.parse.ParseObject;

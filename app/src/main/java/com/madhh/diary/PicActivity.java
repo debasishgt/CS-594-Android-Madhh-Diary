@@ -1,4 +1,4 @@
-package com.echessa.noteapp;
+package com.madhh.diary;
 
 /**
  * Created by debasish on 6/9/2015.

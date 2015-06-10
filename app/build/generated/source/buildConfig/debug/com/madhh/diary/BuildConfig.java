@@ -1,7 +1,7 @@
 /**
  * Automatically generated file. DO NOT MODIFY
  */
-package com.echessa.noteapp;
+package com.madhh.diary;
 
 public final class BuildConfig {
   public static final boolean DEBUG = Boolean.parseBoolean("true");

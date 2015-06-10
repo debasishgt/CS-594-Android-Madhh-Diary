@@ -1,4 +1,4 @@
-package com.echessa.noteapp;
+package com.madhh.diary;
 
 import java.util.ArrayList;
 import java.util.List;
