@@ -8,7 +8,7 @@ import android.graphics.BitmapFactory;
 
 import android.location.Location;
 import android.location.LocationManager;
-//>>>>>>> Stashed changes:app/src/main/java/com/echessa/noteapp/EditNoteActivity.java
+//>>>>>>> Stashed changes:app/src/main/java/com/madhh/diary/EditNoteActivity.java
 import android.media.ExifInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;

@@ -1037,10 +1037,13 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f060005;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f07001a;
+        public static final int abc_search_url_text_holo=0x7f070022;
         public static final int abc_search_url_text_normal=0x7f070000;
         public static final int abc_search_url_text_pressed=0x7f070001;
         public static final int abc_search_url_text_selected=0x7f070002;
+        public static final int accent=0x7f07001a;
+        public static final int actionbar_text=0x7f07001b;
+        public static final int colorAccent=0x7f07001c;
         public static final int common_action_bar_splitter=0x7f070003;
         public static final int common_signin_btn_dark_text_default=0x7f070004;
         public static final int common_signin_btn_dark_text_disabled=0x7f070005;
@@ -1051,8 +1054,13 @@ containing a value of this type.
         public static final int common_signin_btn_light_text_disabled=0x7f07000a;
         public static final int common_signin_btn_light_text_focused=0x7f07000b;
         public static final int common_signin_btn_light_text_pressed=0x7f07000c;
-        public static final int common_signin_btn_text_dark=0x7f07001b;
-        public static final int common_signin_btn_text_light=0x7f07001c;
+        public static final int common_signin_btn_text_dark=0x7f070023;
+        public static final int common_signin_btn_text_light=0x7f070024;
+        public static final int list_item_text=0x7f07001d;
+        public static final int primary=0x7f07001e;
+        public static final int primaryColor=0x7f07001f;
+        public static final int primaryColorDark=0x7f070020;
+        public static final int primary_dark=0x7f070021;
         public static final int wallet_bright_foreground_disabled_holo_light=0x7f07000d;
         public static final int wallet_bright_foreground_holo_dark=0x7f07000e;
         public static final int wallet_bright_foreground_holo_light=0x7f07000f;
@@ -1066,8 +1074,8 @@ containing a value of this type.
         public static final int wallet_hint_foreground_holo_light=0x7f070017;
         public static final int wallet_holo_blue_light=0x7f070018;
         public static final int wallet_link_text_light=0x7f070019;
-        public static final int wallet_primary_text_holo_light=0x7f07001d;
-        public static final int wallet_secondary_text_holo_dark=0x7f07001e;
+        public static final int wallet_primary_text_holo_light=0x7f070025;
+        public static final int wallet_secondary_text_holo_dark=0x7f070026;
     }
     public static final class dimen {
         public static final int abc_action_bar_default_height=0x7f080000;
@@ -1228,15 +1236,15 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f090039;
         public static final int action_bar_title=0x7f090038;
         public static final int action_context_bar=0x7f090033;
-        public static final int action_logout=0x7f090064;
-        public static final int action_map=0x7f090066;
+        public static final int action_logout=0x7f090067;
+        public static final int action_map=0x7f09006a;
         public static final int action_menu_divider=0x7f090001;
         public static final int action_menu_presenter=0x7f090002;
         public static final int action_mode_close_button=0x7f09003a;
-        public static final int action_new=0x7f090063;
-        public static final int action_pic=0x7f090065;
-        public static final int action_refresh=0x7f090062;
-        public static final int action_settings=0x7f090061;
+        public static final int action_new=0x7f090066;
+        public static final int action_pic=0x7f090068;
+        public static final int action_refresh=0x7f090065;
+        public static final int action_settings=0x7f090064;
         public static final int activity_chooser_view_content=0x7f09003b;
         public static final int adjust_height=0x7f090014;
         public static final int adjust_width=0x7f090015;
@@ -1249,15 +1257,15 @@ containing a value of this type.
         public static final int checkbox=0x7f090043;
         public static final int classic=0x7f09002d;
         public static final int collapseActionView=0x7f09001a;
-        public static final int dateList=0x7f090060;
-        public static final int date_list_text_view=0x7f09005f;
+        public static final int dateList=0x7f090063;
+        public static final int date_list_text_view=0x7f090062;
         public static final int default_activity_button=0x7f09003e;
         public static final int dialog=0x7f09001e;
         public static final int disableHome=0x7f090009;
         public static final int donate_with_google=0x7f09002c;
         public static final int dropdown=0x7f09001f;
         public static final int edit_query=0x7f090046;
-        public static final int emailField=0x7f09005d;
+        public static final int emailField=0x7f090060;
         public static final int end=0x7f090012;
         public static final int expand_activities_button=0x7f09003c;
         public static final int expanded_menu=0x7f090042;
@@ -1272,7 +1280,7 @@ containing a value of this type.
         public static final int image=0x7f09003d;
         public static final int listMode=0x7f090006;
         public static final int list_item=0x7f09003f;
-        public static final int loadimage=0x7f09005a;
+        public static final int loadimage=0x7f09005b;
         public static final int loginButton=0x7f090057;
         public static final int map=0x7f090059;
         public static final int match_parent=0x7f090027;
@@ -1283,6 +1291,7 @@ containing a value of this type.
         public static final int normal=0x7f090007;
         public static final int noteContent=0x7f090053;
         public static final int noteTitle=0x7f090052;
+        public static final int notes=0x7f090069;
         public static final int passwordField=0x7f090056;
         public static final int production=0x7f090022;
         public static final int progress_circular=0x7f090004;
@@ -1306,19 +1315,22 @@ containing a value of this type.
         public static final int showCustom=0x7f09000b;
         public static final int showHome=0x7f09000c;
         public static final int showTitle=0x7f09000d;
+        public static final int showimage=0x7f09005d;
         public static final int signUpText=0x7f090058;
-        public static final int signupButton=0x7f09005e;
+        public static final int signupButton=0x7f090061;
         public static final int slide=0x7f090010;
         public static final int split_action_bar=0x7f090034;
         public static final int strict_sandbox=0x7f090024;
         public static final int submit_area=0x7f09004f;
         public static final int tabMode=0x7f090008;
-        public static final int targetimage=0x7f09005c;
-        public static final int targeturi=0x7f09005b;
+        public static final int targetimage=0x7f09005f;
+        public static final int targeturi=0x7f09005e;
         public static final int terrain=0x7f090018;
         public static final int title=0x7f090041;
         public static final int top_action_bar=0x7f090036;
+        public static final int track=0x7f09005a;
         public static final int up=0x7f090037;
+        public static final int uploadimage=0x7f09005c;
         public static final int useLogo=0x7f09000e;
         public static final int usernameField=0x7f090055;
         public static final int withText=0x7f09001d;
@@ -1357,20 +1369,22 @@ containing a value of this type.
         public static final int activity_login=0x7f030019;
         public static final int activity_main=0x7f03001a;
         public static final int activity_maps=0x7f03001b;
-        public static final int activity_pic=0x7f03001c;
-        public static final int activity_sign_up=0x7f03001d;
-        public static final int date_text_view=0x7f03001e;
-        public static final int fragment_games=0x7f03001f;
-        public static final int fragment_movies=0x7f030020;
-        public static final int fragment_top_rated=0x7f030021;
-        public static final int list_item_layout=0x7f030022;
-        public static final int support_simple_spinner_dropdown_item=0x7f030023;
+        public static final int activity_note_list=0x7f03001c;
+        public static final int activity_pic=0x7f03001d;
+        public static final int activity_sign_up=0x7f03001e;
+        public static final int date_text_view=0x7f03001f;
+        public static final int fragment_games=0x7f030020;
+        public static final int fragment_movies=0x7f030021;
+        public static final int fragment_top_rated=0x7f030022;
+        public static final int list_item_layout=0x7f030023;
+        public static final int support_simple_spinner_dropdown_item=0x7f030024;
     }
     public static final class menu {
         public static final int edit_note=0x7f0d0000;
         public static final int login=0x7f0d0001;
         public static final int main=0x7f0d0002;
-        public static final int sign_up=0x7f0d0003;
+        public static final int menu_note_list=0x7f0d0003;
+        public static final int sign_up=0x7f0d0004;
     }
     public static final class raw {
         public static final int gtm_analytics=0x7f050000;
@@ -1432,33 +1446,35 @@ containing a value of this type.
         public static final int edit_error_title=0x7f0b0035;
         public static final int email_hint=0x7f0b0036;
         public static final int google_maps_key=0x7f0b0037;
-        public static final int login_button_label=0x7f0b0038;
-        public static final int login_error_message=0x7f0b0039;
-        public static final int login_error_title=0x7f0b003a;
-        public static final int logout_label=0x7f0b003b;
-        public static final int note_content_hint=0x7f0b003c;
-        public static final int note_title_hint=0x7f0b003d;
-        public static final int password_hint=0x7f0b003e;
-        public static final int save_button=0x7f0b003f;
-        public static final int sign_up_button_label=0x7f0b0040;
-        public static final int sign_up_text=0x7f0b0041;
-        public static final int signup_error_message=0x7f0b0042;
-        public static final int signup_error_title=0x7f0b0043;
-        public static final int store_picture_message=0x7f0b0044;
-        public static final int store_picture_title=0x7f0b0045;
-        public static final int title_activity_edit_note=0x7f0b0046;
-        public static final int title_activity_login=0x7f0b0047;
-        public static final int title_activity_maps=0x7f0b0048;
-        public static final int title_activity_sign_up=0x7f0b0049;
-        public static final int username_hint=0x7f0b004a;
-        public static final int wallet_buy_button_place_holder=0x7f0b004b;
+        public static final int hello_world=0x7f0b0038;
+        public static final int login_button_label=0x7f0b0039;
+        public static final int login_error_message=0x7f0b003a;
+        public static final int login_error_title=0x7f0b003b;
+        public static final int logout_label=0x7f0b003c;
+        public static final int note_content_hint=0x7f0b003d;
+        public static final int note_title_hint=0x7f0b003e;
+        public static final int password_hint=0x7f0b003f;
+        public static final int save_button=0x7f0b0040;
+        public static final int sign_up_button_label=0x7f0b0041;
+        public static final int sign_up_text=0x7f0b0042;
+        public static final int signup_error_message=0x7f0b0043;
+        public static final int signup_error_title=0x7f0b0044;
+        public static final int store_picture_message=0x7f0b0045;
+        public static final int store_picture_title=0x7f0b0046;
+        public static final int title_activity_edit_note=0x7f0b0047;
+        public static final int title_activity_login=0x7f0b0048;
+        public static final int title_activity_maps=0x7f0b0049;
+        public static final int title_activity_note_list=0x7f0b004a;
+        public static final int title_activity_sign_up=0x7f0b004b;
+        public static final int username_hint=0x7f0b004c;
+        public static final int wallet_buy_button_place_holder=0x7f0b004d;
     }
     public static final class style {
-        /** 
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
+        /** <item name="colorPrimary">@color/primaryColor</item>
+<item name="colorPrimaryDark">@color/primaryColor</item>
+<item name="colorAccent">@color/colorAccent</item>
+<item name="actionBarStyle">@style/MyActionBar</item>
+<item name="actionBarTabTextStyle">@style/MyActionBarTabText</item>
  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
          */
@@ -1618,25 +1634,25 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background com.echessa.noteapp:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit com.echessa.noteapp:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked com.echessa.noteapp:backgroundStacked}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout com.echessa.noteapp:customNavigationLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions com.echessa.noteapp:displayOptions}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_divider com.echessa.noteapp:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_height com.echessa.noteapp:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout com.echessa.noteapp:homeLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_icon com.echessa.noteapp:icon}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.echessa.noteapp:indeterminateProgressStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding com.echessa.noteapp:itemPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_logo com.echessa.noteapp:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode com.echessa.noteapp:navigationMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding com.echessa.noteapp:progressBarPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle com.echessa.noteapp:progressBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle com.echessa.noteapp:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.echessa.noteapp:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_title com.echessa.noteapp:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle com.echessa.noteapp:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_background com.madhh.diary:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit com.madhh.diary:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked com.madhh.diary:backgroundStacked}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout com.madhh.diary:customNavigationLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions com.madhh.diary:displayOptions}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_divider com.madhh.diary:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_height com.madhh.diary:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout com.madhh.diary:homeLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_icon com.madhh.diary:icon}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.madhh.diary:indeterminateProgressStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding com.madhh.diary:itemPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_logo com.madhh.diary:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode com.madhh.diary:navigationMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding com.madhh.diary:progressBarPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle com.madhh.diary:progressBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle com.madhh.diary:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.madhh.diary:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_title com.madhh.diary:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle com.madhh.diary:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -1666,17 +1682,17 @@ containing a value of this type.
             0x7f01004d, 0x7f01004e, 0x7f01004f
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#background}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#background}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:background
+          @attr name com.madhh.diary:background
         */
         public static final int ActionBar_background = 10;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -1684,11 +1700,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.echessa.noteapp:backgroundSplit
+          @attr name com.madhh.diary:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#backgroundStacked}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#backgroundStacked}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -1696,21 +1712,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.echessa.noteapp:backgroundStacked
+          @attr name com.madhh.diary:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#customNavigationLayout}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#customNavigationLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:customNavigationLayout
+          @attr name com.madhh.diary:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#displayOptions}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#displayOptions}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -1727,21 +1743,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:displayOptions
+          @attr name com.madhh.diary:displayOptions
         */
         public static final int ActionBar_displayOptions = 3;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#divider}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:divider
+          @attr name com.madhh.diary:divider
         */
         public static final int ActionBar_divider = 9;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#height}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#height}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -1753,41 +1769,41 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:height
+          @attr name com.madhh.diary:height
         */
         public static final int ActionBar_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#homeLayout}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#homeLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:homeLayout
+          @attr name com.madhh.diary:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#icon}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#icon}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:icon
+          @attr name com.madhh.diary:icon
         */
         public static final int ActionBar_icon = 7;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#indeterminateProgressStyle}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#indeterminateProgressStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:indeterminateProgressStyle
+          @attr name com.madhh.diary:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#itemPadding}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#itemPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -1799,21 +1815,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:itemPadding
+          @attr name com.madhh.diary:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#logo}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#logo}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:logo
+          @attr name com.madhh.diary:logo
         */
         public static final int ActionBar_logo = 8;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#navigationMode}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#navigationMode}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -1827,11 +1843,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>listMode</code></td><td>1</td><td></td></tr>
 <tr><td><code>tabMode</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:navigationMode
+          @attr name com.madhh.diary:navigationMode
         */
         public static final int ActionBar_navigationMode = 2;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#progressBarPadding}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#progressBarPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -1843,21 +1859,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:progressBarPadding
+          @attr name com.madhh.diary:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#progressBarStyle}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#progressBarStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:progressBarStyle
+          @attr name com.madhh.diary:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#subtitle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -1867,21 +1883,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:subtitle
+          @attr name com.madhh.diary:subtitle
         */
         public static final int ActionBar_subtitle = 4;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:subtitleTextStyle
+          @attr name com.madhh.diary:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#title}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#title}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -1891,17 +1907,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:title
+          @attr name com.madhh.diary:title
         */
         public static final int ActionBar_title = 1;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:titleTextStyle
+          @attr name com.madhh.diary:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
         /** Attributes that can be used with a ActionBarLayout.
@@ -1929,13 +1945,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowActionBar com.echessa.noteapp:windowActionBar}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowActionBarOverlay com.echessa.noteapp:windowActionBarOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowFixedHeightMajor com.echessa.noteapp:windowFixedHeightMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowFixedHeightMinor com.echessa.noteapp:windowFixedHeightMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowFixedWidthMajor com.echessa.noteapp:windowFixedWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowFixedWidthMinor com.echessa.noteapp:windowFixedWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowSplitActionBar com.echessa.noteapp:windowSplitActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowActionBar com.madhh.diary:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowActionBarOverlay com.madhh.diary:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowFixedHeightMajor com.madhh.diary:windowFixedHeightMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowFixedHeightMinor com.madhh.diary:windowFixedHeightMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowFixedWidthMajor com.madhh.diary:windowFixedWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowFixedWidthMinor com.madhh.diary:windowFixedWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowSplitActionBar com.madhh.diary:windowSplitActionBar}</code></td><td></td></tr>
            </table>
            @see #ActionBarWindow_windowActionBar
            @see #ActionBarWindow_windowActionBarOverlay
@@ -1950,7 +1966,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010054, 0x7f010055, 0x7f010056
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#windowActionBar}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#windowActionBar}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -1960,11 +1976,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:windowActionBar
+          @attr name com.madhh.diary:windowActionBar
         */
         public static final int ActionBarWindow_windowActionBar = 0;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#windowActionBarOverlay}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#windowActionBarOverlay}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -1974,11 +1990,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:windowActionBarOverlay
+          @attr name com.madhh.diary:windowActionBarOverlay
         */
         public static final int ActionBarWindow_windowActionBarOverlay = 1;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#windowFixedHeightMajor}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#windowFixedHeightMajor}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -1993,11 +2009,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:windowFixedHeightMajor
+          @attr name com.madhh.diary:windowFixedHeightMajor
         */
         public static final int ActionBarWindow_windowFixedHeightMajor = 6;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#windowFixedHeightMinor}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#windowFixedHeightMinor}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -2012,11 +2028,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:windowFixedHeightMinor
+          @attr name com.madhh.diary:windowFixedHeightMinor
         */
         public static final int ActionBarWindow_windowFixedHeightMinor = 4;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#windowFixedWidthMajor}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#windowFixedWidthMajor}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -2031,11 +2047,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:windowFixedWidthMajor
+          @attr name com.madhh.diary:windowFixedWidthMajor
         */
         public static final int ActionBarWindow_windowFixedWidthMajor = 3;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#windowFixedWidthMinor}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#windowFixedWidthMinor}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -2050,11 +2066,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:windowFixedWidthMinor
+          @attr name com.madhh.diary:windowFixedWidthMinor
         */
         public static final int ActionBarWindow_windowFixedWidthMinor = 5;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#windowSplitActionBar}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#windowSplitActionBar}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -2064,7 +2080,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:windowSplitActionBar
+          @attr name com.madhh.diary:windowSplitActionBar
         */
         public static final int ActionBarWindow_windowSplitActionBar = 2;
         /** Attributes that can be used with a ActionMenuItemView.
@@ -2097,11 +2113,11 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background com.echessa.noteapp:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit com.echessa.noteapp:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_height com.echessa.noteapp:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.echessa.noteapp:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle com.echessa.noteapp:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_background com.madhh.diary:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit com.madhh.diary:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_height com.madhh.diary:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.madhh.diary:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle com.madhh.diary:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -2114,17 +2130,17 @@ containing a value of this type.
             0x7f010049
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#background}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#background}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:background
+          @attr name com.madhh.diary:background
         */
         public static final int ActionMode_background = 3;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -2132,11 +2148,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.echessa.noteapp:backgroundSplit
+          @attr name com.madhh.diary:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#height}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#height}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -2148,27 +2164,27 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:height
+          @attr name com.madhh.diary:height
         */
         public static final int ActionMode_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:subtitleTextStyle
+          @attr name com.madhh.diary:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:titleTextStyle
+          @attr name com.madhh.diary:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /** Attributes that can be used with a ActivityChooserView.
@@ -2177,8 +2193,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.echessa.noteapp:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.echessa.noteapp:initialActivityCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.madhh.diary:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.madhh.diary:initialActivityCount}</code></td><td></td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -2187,17 +2203,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010057, 0x7f010058
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#expandActivityOverflowButtonDrawable}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#expandActivityOverflowButtonDrawable}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:expandActivityOverflowButtonDrawable
+          @attr name com.madhh.diary:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#initialActivityCount}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#initialActivityCount}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
@@ -2207,7 +2223,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:initialActivityCount
+          @attr name com.madhh.diary:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a AdsAttrs.
@@ -2216,9 +2232,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AdsAttrs_adSize com.echessa.noteapp:adSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #AdsAttrs_adSizes com.echessa.noteapp:adSizes}</code></td><td></td></tr>
-           <tr><td><code>{@link #AdsAttrs_adUnitId com.echessa.noteapp:adUnitId}</code></td><td></td></tr>
+           <tr><td><code>{@link #AdsAttrs_adSize com.madhh.diary:adSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #AdsAttrs_adSizes com.madhh.diary:adSizes}</code></td><td></td></tr>
+           <tr><td><code>{@link #AdsAttrs_adUnitId com.madhh.diary:adUnitId}</code></td><td></td></tr>
            </table>
            @see #AdsAttrs_adSize
            @see #AdsAttrs_adSizes
@@ -2228,7 +2244,7 @@ containing a value of this type.
             0x7f010059, 0x7f01005a, 0x7f01005b
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#adSize}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#adSize}
           attribute's value can be found in the {@link #AdsAttrs} array.
 
 
@@ -2238,11 +2254,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:adSize
+          @attr name com.madhh.diary:adSize
         */
         public static final int AdsAttrs_adSize = 0;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#adSizes}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#adSizes}
           attribute's value can be found in the {@link #AdsAttrs} array.
 
 
@@ -2252,11 +2268,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:adSizes
+          @attr name com.madhh.diary:adSizes
         */
         public static final int AdsAttrs_adSizes = 1;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#adUnitId}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#adUnitId}
           attribute's value can be found in the {@link #AdsAttrs} array.
 
 
@@ -2266,7 +2282,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:adUnitId
+          @attr name com.madhh.diary:adUnitId
         */
         public static final int AdsAttrs_adUnitId = 2;
         /** Attributes that can be used with a CompatTextView.
@@ -2275,7 +2291,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CompatTextView_textAllCaps com.echessa.noteapp:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #CompatTextView_textAllCaps com.madhh.diary:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #CompatTextView_textAllCaps
          */
@@ -2283,14 +2299,14 @@ containing a value of this type.
             0x7f01005c
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#textAllCaps}
           attribute's value can be found in the {@link #CompatTextView} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.echessa.noteapp:textAllCaps
+          @attr name com.madhh.diary:textAllCaps
         */
         public static final int CompatTextView_textAllCaps = 0;
         /** Attributes that can be used with a CustomWalletTheme.
@@ -2299,7 +2315,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CustomWalletTheme_windowTransitionStyle com.echessa.noteapp:windowTransitionStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #CustomWalletTheme_windowTransitionStyle com.madhh.diary:windowTransitionStyle}</code></td><td></td></tr>
            </table>
            @see #CustomWalletTheme_windowTransitionStyle
          */
@@ -2307,7 +2323,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01005d
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#windowTransitionStyle}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#windowTransitionStyle}
           attribute's value can be found in the {@link #CustomWalletTheme} array.
 
 
@@ -2320,7 +2336,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>slide</code></td><td>1</td><td></td></tr>
 <tr><td><code>none</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:windowTransitionStyle
+          @attr name com.madhh.diary:windowTransitionStyle
         */
         public static final int CustomWalletTheme_windowTransitionStyle = 0;
         /** Attributes that can be used with a LinearLayoutICS.
@@ -2329,9 +2345,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LinearLayoutICS_divider com.echessa.noteapp:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutICS_dividerPadding com.echessa.noteapp:dividerPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutICS_showDividers com.echessa.noteapp:showDividers}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutICS_divider com.madhh.diary:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutICS_dividerPadding com.madhh.diary:dividerPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutICS_showDividers com.madhh.diary:showDividers}</code></td><td></td></tr>
            </table>
            @see #LinearLayoutICS_divider
            @see #LinearLayoutICS_dividerPadding
@@ -2341,17 +2357,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010046, 0x7f01005e, 0x7f01005f
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#divider}
           attribute's value can be found in the {@link #LinearLayoutICS} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:divider
+          @attr name com.madhh.diary:divider
         */
         public static final int LinearLayoutICS_divider = 0;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#dividerPadding}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#dividerPadding}
           attribute's value can be found in the {@link #LinearLayoutICS} array.
 
 
@@ -2363,11 +2379,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:dividerPadding
+          @attr name com.madhh.diary:dividerPadding
         */
         public static final int LinearLayoutICS_dividerPadding = 2;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#showDividers}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#showDividers}
           attribute's value can be found in the {@link #LinearLayoutICS} array.
 
 
@@ -2382,7 +2398,7 @@ containing a value of this type.
 <tr><td><code>middle</code></td><td>2</td><td></td></tr>
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:showDividers
+          @attr name com.madhh.diary:showDividers
         */
         public static final int LinearLayoutICS_showDividers = 1;
         /** Attributes that can be used with a LoadingImageView.
@@ -2391,9 +2407,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LoadingImageView_circleCrop com.echessa.noteapp:circleCrop}</code></td><td></td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatio com.echessa.noteapp:imageAspectRatio}</code></td><td></td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust com.echessa.noteapp:imageAspectRatioAdjust}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_circleCrop com.madhh.diary:circleCrop}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatio com.madhh.diary:imageAspectRatio}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust com.madhh.diary:imageAspectRatioAdjust}</code></td><td></td></tr>
            </table>
            @see #LoadingImageView_circleCrop
            @see #LoadingImageView_imageAspectRatio
@@ -2403,7 +2419,7 @@ containing a value of this type.
             0x7f010060, 0x7f010061, 0x7f010062
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#circleCrop}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#circleCrop}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -2413,11 +2429,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:circleCrop
+          @attr name com.madhh.diary:circleCrop
         */
         public static final int LoadingImageView_circleCrop = 2;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#imageAspectRatio}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#imageAspectRatio}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -2427,11 +2443,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:imageAspectRatio
+          @attr name com.madhh.diary:imageAspectRatio
         */
         public static final int LoadingImageView_imageAspectRatio = 1;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#imageAspectRatioAdjust}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#imageAspectRatioAdjust}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -2445,7 +2461,7 @@ containing a value of this type.
 <tr><td><code>adjust_width</code></td><td>1</td><td></td></tr>
 <tr><td><code>adjust_height</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:imageAspectRatioAdjust
+          @attr name com.madhh.diary:imageAspectRatioAdjust
         */
         public static final int LoadingImageView_imageAspectRatioAdjust = 0;
         /** Attributes that can be used with a MapAttrs.
@@ -2454,22 +2470,22 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MapAttrs_cameraBearing com.echessa.noteapp:cameraBearing}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.echessa.noteapp:cameraTargetLat}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.echessa.noteapp:cameraTargetLng}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTilt com.echessa.noteapp:cameraTilt}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraZoom com.echessa.noteapp:cameraZoom}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_liteMode com.echessa.noteapp:liteMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_mapType com.echessa.noteapp:mapType}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiCompass com.echessa.noteapp:uiCompass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiMapToolbar com.echessa.noteapp:uiMapToolbar}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.echessa.noteapp:uiRotateGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.echessa.noteapp:uiScrollGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.echessa.noteapp:uiTiltGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomControls com.echessa.noteapp:uiZoomControls}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.echessa.noteapp:uiZoomGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.echessa.noteapp:useViewLifecycle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.echessa.noteapp:zOrderOnTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing com.madhh.diary:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.madhh.diary:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.madhh.diary:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt com.madhh.diary:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom com.madhh.diary:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_liteMode com.madhh.diary:liteMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType com.madhh.diary:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass com.madhh.diary:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiMapToolbar com.madhh.diary:uiMapToolbar}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.madhh.diary:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.madhh.diary:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.madhh.diary:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls com.madhh.diary:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.madhh.diary:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.madhh.diary:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.madhh.diary:zOrderOnTop}</code></td><td></td></tr>
            </table>
            @see #MapAttrs_cameraBearing
            @see #MapAttrs_cameraTargetLat
@@ -2495,7 +2511,7 @@ containing a value of this type.
             0x7f01006f, 0x7f010070, 0x7f010071, 0x7f010072
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#cameraBearing}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#cameraBearing}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2505,11 +2521,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:cameraBearing
+          @attr name com.madhh.diary:cameraBearing
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#cameraTargetLat}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#cameraTargetLat}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2519,11 +2535,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:cameraTargetLat
+          @attr name com.madhh.diary:cameraTargetLat
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#cameraTargetLng}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#cameraTargetLng}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2533,11 +2549,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:cameraTargetLng
+          @attr name com.madhh.diary:cameraTargetLng
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#cameraTilt}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#cameraTilt}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2547,11 +2563,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:cameraTilt
+          @attr name com.madhh.diary:cameraTilt
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#cameraZoom}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#cameraZoom}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2561,11 +2577,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:cameraZoom
+          @attr name com.madhh.diary:cameraZoom
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#liteMode}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#liteMode}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2575,11 +2591,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:liteMode
+          @attr name com.madhh.diary:liteMode
         */
         public static final int MapAttrs_liteMode = 6;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#mapType}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#mapType}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2595,11 +2611,11 @@ containing a value of this type.
 <tr><td><code>terrain</code></td><td>3</td><td></td></tr>
 <tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:mapType
+          @attr name com.madhh.diary:mapType
         */
         public static final int MapAttrs_mapType = 0;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#uiCompass}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#uiCompass}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2609,11 +2625,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:uiCompass
+          @attr name com.madhh.diary:uiCompass
         */
         public static final int MapAttrs_uiCompass = 7;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#uiMapToolbar}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#uiMapToolbar}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2623,11 +2639,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:uiMapToolbar
+          @attr name com.madhh.diary:uiMapToolbar
         */
         public static final int MapAttrs_uiMapToolbar = 15;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#uiRotateGestures}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#uiRotateGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2637,11 +2653,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:uiRotateGestures
+          @attr name com.madhh.diary:uiRotateGestures
         */
         public static final int MapAttrs_uiRotateGestures = 8;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#uiScrollGestures}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#uiScrollGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2651,11 +2667,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:uiScrollGestures
+          @attr name com.madhh.diary:uiScrollGestures
         */
         public static final int MapAttrs_uiScrollGestures = 9;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#uiTiltGestures}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#uiTiltGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2665,11 +2681,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:uiTiltGestures
+          @attr name com.madhh.diary:uiTiltGestures
         */
         public static final int MapAttrs_uiTiltGestures = 10;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#uiZoomControls}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#uiZoomControls}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2679,11 +2695,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:uiZoomControls
+          @attr name com.madhh.diary:uiZoomControls
         */
         public static final int MapAttrs_uiZoomControls = 11;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#uiZoomGestures}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#uiZoomGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2693,11 +2709,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:uiZoomGestures
+          @attr name com.madhh.diary:uiZoomGestures
         */
         public static final int MapAttrs_uiZoomGestures = 12;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#useViewLifecycle}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#useViewLifecycle}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2707,11 +2723,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:useViewLifecycle
+          @attr name com.madhh.diary:useViewLifecycle
         */
         public static final int MapAttrs_useViewLifecycle = 13;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#zOrderOnTop}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#zOrderOnTop}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2721,7 +2737,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:zOrderOnTop
+          @attr name com.madhh.diary:zOrderOnTop
         */
         public static final int MapAttrs_zOrderOnTop = 14;
         /** Attributes that can be used with a MenuGroup.
@@ -2790,9 +2806,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout com.echessa.noteapp:actionLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass com.echessa.noteapp:actionProviderClass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass com.echessa.noteapp:actionViewClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionLayout com.madhh.diary:actionLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass com.madhh.diary:actionProviderClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionViewClass com.madhh.diary:actionViewClass}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checked android:checked}</code></td><td></td></tr>
@@ -2806,7 +2822,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction com.echessa.noteapp:showAsAction}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction com.madhh.diary:showAsAction}</code></td><td></td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -2834,17 +2850,17 @@ containing a value of this type.
             0x7f010076
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#actionLayout}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#actionLayout}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:actionLayout
+          @attr name com.madhh.diary:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#actionProviderClass}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#actionProviderClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -2854,11 +2870,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:actionProviderClass
+          @attr name com.madhh.diary:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#actionViewClass}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#actionViewClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -2868,7 +2884,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:actionViewClass
+          @attr name com.madhh.diary:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
@@ -2950,7 +2966,7 @@ containing a value of this type.
         */
         public static final int MenuItem_android_visible = 4;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#showAsAction}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#showAsAction}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -2966,7 +2982,7 @@ containing a value of this type.
 <tr><td><code>withText</code></td><td>4</td><td></td></tr>
 <tr><td><code>collapseActionView</code></td><td>8</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:showAsAction
+          @attr name com.madhh.diary:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
         /** Attributes that can be used with a MenuView.
@@ -3054,8 +3070,8 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault com.echessa.noteapp:iconifiedByDefault}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryHint com.echessa.noteapp:queryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault com.madhh.diary:iconifiedByDefault}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryHint com.madhh.diary:queryHint}</code></td><td></td></tr>
            </table>
            @see #SearchView_android_imeOptions
            @see #SearchView_android_inputType
@@ -3086,7 +3102,7 @@ containing a value of this type.
         */
         public static final int SearchView_android_maxWidth = 0;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#iconifiedByDefault}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#iconifiedByDefault}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -3096,11 +3112,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:iconifiedByDefault
+          @attr name com.madhh.diary:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 3;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#queryHint}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#queryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -3110,7 +3126,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:queryHint
+          @attr name com.madhh.diary:queryHint
         */
         public static final int SearchView_queryHint = 4;
         /** Attributes that can be used with a Spinner.
@@ -3125,10 +3141,10 @@ containing a value of this type.
            <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.echessa.noteapp:disableChildrenWhenDisabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_popupPromptView com.echessa.noteapp:popupPromptView}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_prompt com.echessa.noteapp:prompt}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_spinnerMode com.echessa.noteapp:spinnerMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.madhh.diary:disableChildrenWhenDisabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_popupPromptView com.madhh.diary:popupPromptView}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_prompt com.madhh.diary:prompt}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_spinnerMode com.madhh.diary:spinnerMode}</code></td><td></td></tr>
            </table>
            @see #Spinner_android_dropDownHorizontalOffset
            @see #Spinner_android_dropDownSelector
@@ -3183,7 +3199,7 @@ containing a value of this type.
         */
         public static final int Spinner_android_popupBackground = 2;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#disableChildrenWhenDisabled}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#disableChildrenWhenDisabled}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -3193,31 +3209,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:disableChildrenWhenDisabled
+          @attr name com.madhh.diary:disableChildrenWhenDisabled
         */
         public static final int Spinner_disableChildrenWhenDisabled = 9;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#popupPromptView}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#popupPromptView}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:popupPromptView
+          @attr name com.madhh.diary:popupPromptView
         */
         public static final int Spinner_popupPromptView = 8;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#prompt}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#prompt}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:prompt
+          @attr name com.madhh.diary:prompt
         */
         public static final int Spinner_prompt = 6;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#spinnerMode}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#spinnerMode}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -3230,7 +3246,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>dialog</code></td><td>0</td><td></td></tr>
 <tr><td><code>dropdown</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:spinnerMode
+          @attr name com.madhh.diary:spinnerMode
         */
         public static final int Spinner_spinnerMode = 7;
         /** Attributes that can be used with a Theme.
@@ -3239,12 +3255,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Theme_actionDropDownStyle com.echessa.noteapp:actionDropDownStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.echessa.noteapp:dropdownListPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.echessa.noteapp:listChoiceBackgroundIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListTheme com.echessa.noteapp:panelMenuListTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListWidth com.echessa.noteapp:panelMenuListWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupMenuStyle com.echessa.noteapp:popupMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionDropDownStyle com.madhh.diary:actionDropDownStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.madhh.diary:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.madhh.diary:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListTheme com.madhh.diary:panelMenuListTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListWidth com.madhh.diary:panelMenuListWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupMenuStyle com.madhh.diary:popupMenuStyle}</code></td><td></td></tr>
            </table>
            @see #Theme_actionDropDownStyle
            @see #Theme_dropdownListPreferredItemHeight
@@ -3258,17 +3274,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010081, 0x7f010082
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#actionDropDownStyle}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#actionDropDownStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:actionDropDownStyle
+          @attr name com.madhh.diary:actionDropDownStyle
         */
         public static final int Theme_actionDropDownStyle = 0;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#dropdownListPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#dropdownListPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -3280,31 +3296,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:dropdownListPreferredItemHeight
+          @attr name com.madhh.diary:dropdownListPreferredItemHeight
         */
         public static final int Theme_dropdownListPreferredItemHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#listChoiceBackgroundIndicator}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#listChoiceBackgroundIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:listChoiceBackgroundIndicator
+          @attr name com.madhh.diary:listChoiceBackgroundIndicator
         */
         public static final int Theme_listChoiceBackgroundIndicator = 5;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#panelMenuListTheme}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#panelMenuListTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:panelMenuListTheme
+          @attr name com.madhh.diary:panelMenuListTheme
         */
         public static final int Theme_panelMenuListTheme = 4;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#panelMenuListWidth}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#panelMenuListWidth}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -3316,17 +3332,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:panelMenuListWidth
+          @attr name com.madhh.diary:panelMenuListWidth
         */
         public static final int Theme_panelMenuListWidth = 3;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#popupMenuStyle}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#popupMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:popupMenuStyle
+          @attr name com.madhh.diary:popupMenuStyle
         */
         public static final int Theme_popupMenuStyle = 2;
         /** Attributes that can be used with a View.
@@ -3336,8 +3352,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingEnd com.echessa.noteapp:paddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingStart com.echessa.noteapp:paddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingEnd com.madhh.diary:paddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingStart com.madhh.diary:paddingStart}</code></td><td></td></tr>
            </table>
            @see #View_android_focusable
            @see #View_paddingEnd
@@ -3353,7 +3369,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int View_android_focusable = 0;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#paddingEnd}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#paddingEnd}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -3365,11 +3381,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:paddingEnd
+          @attr name com.madhh.diary:paddingEnd
         */
         public static final int View_paddingEnd = 2;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#paddingStart}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#paddingStart}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -3381,7 +3397,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:paddingStart
+          @attr name com.madhh.diary:paddingStart
         */
         public static final int View_paddingStart = 1;
         /** Attributes that can be used with a WalletFragmentOptions.
@@ -3390,10 +3406,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_appTheme com.echessa.noteapp:appTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_environment com.echessa.noteapp:environment}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode com.echessa.noteapp:fragmentMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle com.echessa.noteapp:fragmentStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_appTheme com.madhh.diary:appTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_environment com.madhh.diary:environment}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode com.madhh.diary:fragmentMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle com.madhh.diary:fragmentStyle}</code></td><td></td></tr>
            </table>
            @see #WalletFragmentOptions_appTheme
            @see #WalletFragmentOptions_environment
@@ -3404,7 +3420,7 @@ containing a value of this type.
             0x7f010085, 0x7f010086, 0x7f010087, 0x7f010088
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#appTheme}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#appTheme}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -3417,11 +3433,11 @@ containing a value of this type.
 <tr><td><code>holo_dark</code></td><td>0</td><td></td></tr>
 <tr><td><code>holo_light</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:appTheme
+          @attr name com.madhh.diary:appTheme
         */
         public static final int WalletFragmentOptions_appTheme = 0;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#environment}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#environment}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -3435,11 +3451,11 @@ containing a value of this type.
 <tr><td><code>sandbox</code></td><td>0</td><td></td></tr>
 <tr><td><code>strict_sandbox</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:environment
+          @attr name com.madhh.diary:environment
         */
         public static final int WalletFragmentOptions_environment = 1;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#fragmentMode}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#fragmentMode}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -3452,17 +3468,17 @@ containing a value of this type.
 <tr><td><code>buyButton</code></td><td>1</td><td></td></tr>
 <tr><td><code>selectionDetails</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:fragmentMode
+          @attr name com.madhh.diary:fragmentMode
         */
         public static final int WalletFragmentOptions_fragmentMode = 3;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#fragmentStyle}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#fragmentStyle}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:fragmentStyle
+          @attr name com.madhh.diary:fragmentStyle
         */
         public static final int WalletFragmentOptions_fragmentStyle = 2;
         /** Attributes that can be used with a WalletFragmentStyle.
@@ -3471,17 +3487,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance com.echessa.noteapp:buyButtonAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight com.echessa.noteapp:buyButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText com.echessa.noteapp:buyButtonText}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth com.echessa.noteapp:buyButtonWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground com.echessa.noteapp:maskedWalletDetailsBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground com.echessa.noteapp:maskedWalletDetailsButtonBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance com.echessa.noteapp:maskedWalletDetailsButtonTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance com.echessa.noteapp:maskedWalletDetailsHeaderTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType com.echessa.noteapp:maskedWalletDetailsLogoImageType}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor com.echessa.noteapp:maskedWalletDetailsLogoTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance com.echessa.noteapp:maskedWalletDetailsTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance com.madhh.diary:buyButtonAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight com.madhh.diary:buyButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText com.madhh.diary:buyButtonText}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth com.madhh.diary:buyButtonWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground com.madhh.diary:maskedWalletDetailsBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground com.madhh.diary:maskedWalletDetailsButtonBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance com.madhh.diary:maskedWalletDetailsButtonTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance com.madhh.diary:maskedWalletDetailsHeaderTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType com.madhh.diary:maskedWalletDetailsLogoImageType}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor com.madhh.diary:maskedWalletDetailsLogoTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance com.madhh.diary:maskedWalletDetailsTextAppearance}</code></td><td></td></tr>
            </table>
            @see #WalletFragmentStyle_buyButtonAppearance
            @see #WalletFragmentStyle_buyButtonHeight
@@ -3501,7 +3517,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010091, 0x7f010092, 0x7f010093
         };
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#buyButtonAppearance}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#buyButtonAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -3515,11 +3531,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>grayscale</code></td><td>2</td><td></td></tr>
 <tr><td><code>monochrome</code></td><td>3</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:buyButtonAppearance
+          @attr name com.madhh.diary:buyButtonAppearance
         */
         public static final int WalletFragmentStyle_buyButtonAppearance = 3;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#buyButtonHeight}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#buyButtonHeight}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -3540,11 +3556,11 @@ containing a value of this type.
 <tr><td><code>match_parent</code></td><td>-1</td><td></td></tr>
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:buyButtonHeight
+          @attr name com.madhh.diary:buyButtonHeight
         */
         public static final int WalletFragmentStyle_buyButtonHeight = 0;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#buyButtonText}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#buyButtonText}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -3559,11 +3575,11 @@ containing a value of this type.
 <tr><td><code>book_now</code></td><td>3</td><td></td></tr>
 <tr><td><code>donate_with_google</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:buyButtonText
+          @attr name com.madhh.diary:buyButtonText
         */
         public static final int WalletFragmentStyle_buyButtonText = 2;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#buyButtonWidth}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#buyButtonWidth}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -3584,11 +3600,11 @@ containing a value of this type.
 <tr><td><code>match_parent</code></td><td>-1</td><td></td></tr>
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:buyButtonWidth
+          @attr name com.madhh.diary:buyButtonWidth
         */
         public static final int WalletFragmentStyle_buyButtonWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#maskedWalletDetailsBackground}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#maskedWalletDetailsBackground}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -3596,11 +3612,11 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.echessa.noteapp:maskedWalletDetailsBackground
+          @attr name com.madhh.diary:maskedWalletDetailsBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsBackground = 6;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#maskedWalletDetailsButtonBackground}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#maskedWalletDetailsButtonBackground}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -3608,31 +3624,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.echessa.noteapp:maskedWalletDetailsButtonBackground
+          @attr name com.madhh.diary:maskedWalletDetailsButtonBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonBackground = 8;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#maskedWalletDetailsButtonTextAppearance}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#maskedWalletDetailsButtonTextAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:maskedWalletDetailsButtonTextAppearance
+          @attr name com.madhh.diary:maskedWalletDetailsButtonTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance = 7;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#maskedWalletDetailsHeaderTextAppearance}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#maskedWalletDetailsHeaderTextAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:maskedWalletDetailsHeaderTextAppearance
+          @attr name com.madhh.diary:maskedWalletDetailsHeaderTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#maskedWalletDetailsLogoImageType}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#maskedWalletDetailsLogoImageType}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -3645,11 +3661,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>classic</code></td><td>1</td><td></td></tr>
 <tr><td><code>monochrome</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.echessa.noteapp:maskedWalletDetailsLogoImageType
+          @attr name com.madhh.diary:maskedWalletDetailsLogoImageType
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoImageType = 10;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#maskedWalletDetailsLogoTextColor}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#maskedWalletDetailsLogoTextColor}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -3660,17 +3676,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.echessa.noteapp:maskedWalletDetailsLogoTextColor
+          @attr name com.madhh.diary:maskedWalletDetailsLogoTextColor
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoTextColor = 9;
         /**
-          <p>This symbol is the offset where the {@link com.echessa.noteapp.R.attr#maskedWalletDetailsTextAppearance}
+          <p>This symbol is the offset where the {@link com.madhh.diary.R.attr#maskedWalletDetailsTextAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.echessa.noteapp:maskedWalletDetailsTextAppearance
+          @attr name com.madhh.diary:maskedWalletDetailsTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsTextAppearance = 4;
     };

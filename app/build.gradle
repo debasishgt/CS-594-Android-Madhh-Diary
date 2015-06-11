@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.0"
 
     defaultConfig {
-        applicationId "com.echessa.noteapp"
+        applicationId "com.madhh.diary"
         minSdkVersion 11
         targetSdkVersion 19
     }

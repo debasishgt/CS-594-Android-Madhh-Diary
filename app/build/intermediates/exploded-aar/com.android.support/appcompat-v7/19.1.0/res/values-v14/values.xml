@@ -4,17 +4,17 @@
     <!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/klp-ub-dev/frameworks/support/v7/appcompat/res/values-v14/styles_base.xml -->
     <eat-comment />
 
-    <style name="TextAppearance.AppCompat.Base.SearchResult.Subtitle" parent="@android:TextAppearance.Holo.SearchResult.Subtitle"></style>
+    <style name="TextAppearance.AppCompat.Base.SearchResult.Subtitle" parent="android:TextAppearance.Holo.SearchResult.Subtitle"></style>
 
-    <style name="TextAppearance.AppCompat.Base.SearchResult.Title" parent="@android:TextAppearance.Holo.SearchResult.Title"></style>
+    <style name="TextAppearance.AppCompat.Base.SearchResult.Title" parent="android:TextAppearance.Holo.SearchResult.Title"></style>
 
     <style name="TextAppearance.AppCompat.Base.Widget.PopupMenu.Large" parent="android:TextAppearance.Holo.Widget.PopupMenu.Large"></style>
 
     <style name="TextAppearance.AppCompat.Base.Widget.PopupMenu.Small" parent="android:TextAppearance.Holo.Widget.PopupMenu.Small"></style>
 
-    <style name="TextAppearance.AppCompat.Light.Base.SearchResult.Subtitle" parent="@android:TextAppearance.Holo.SearchResult.Subtitle"></style>
+    <style name="TextAppearance.AppCompat.Light.Base.SearchResult.Subtitle" parent="android:TextAppearance.Holo.SearchResult.Subtitle"></style>
 
-    <style name="TextAppearance.AppCompat.Light.Base.SearchResult.Title" parent="@android:TextAppearance.Holo.SearchResult.Title"></style>
+    <style name="TextAppearance.AppCompat.Light.Base.SearchResult.Title" parent="android:TextAppearance.Holo.SearchResult.Title"></style>
 
     <style name="TextAppearance.AppCompat.Light.Base.Widget.PopupMenu.Large" parent="android:TextAppearance.Holo.Widget.PopupMenu.Large"></style>
 
