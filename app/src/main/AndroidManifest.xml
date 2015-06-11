@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.madhh.diary"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -29,10 +29,10 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name="com.madhh.diary.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,22 +41,20 @@
         </activity>
         <activity
             android:name="com.madhh.diary.EditNoteActivity"
-            android:label="@string/title_activity_edit_note" >
+            android:label="@string/title_activity_edit_note">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.madhh.diary.MainActivity" />
         </activity>
         <activity
             android:name="com.madhh.diary.LoginActivity"
-            android:label="@string/title_activity_login" >
-        </activity>
+            android:label="@string/title_activity_login"></activity>
         <activity
-            android:name="com.madhh.diary.PicActivity"
-            android:label="Pic View" >
-        </activity>
+            android:name=".PicActivity"
+            android:label="Pic View"></activity>
         <activity
             android:name="com.madhh.diary.SignUpActivity"
-            android:label="@string/title_activity_sign_up" >
+            android:label="@string/title_activity_sign_up">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.madhh.diary.LoginActivity" />
@@ -71,8 +69,7 @@
 
         <activity
             android:name="com.madhh.diary.MapActivity"
-            android:label="@string/title_activity_maps" >
-        </activity>
+            android:label="@string/title_activity_maps"></activity>
     </application>
 
 </manifest>

@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.madhh.diary.R;
+
 public class PicActivity extends Activity {
 
     TextView textTargetUri;
