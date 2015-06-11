@@ -22,29 +22,26 @@ import com.parse.ParseUser;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends ListActivity {
+public class NoteListActivity extends ListActivity {
 
-  //  private List<String> posts;
+    private List<Note> posts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_note_list);
+
+        Toast.makeText(this,"this is new activity",Toast.LENGTH_SHORT).show();
 
         ParseUser currentUser = ParseUser.getCurrentUser();
         if (currentUser == null) {
             loadLoginView();
         }
 
-       // posts = new ArrayList<String>();
-        //create List of Items
-        String[] demoDates = {"Jan 1st", "Jan 2nd", "Jan 3rd", "Jan 4th", "Jan 5th",
-                "Jan 6th", "Jan 7th", "Jan 8th", "Jan 9th", "Jan 10th",
-                "Jan 11th", "Jan 12th", "Jan 13th", "Jan 14th", "Jan 15th"};
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                R.layout.list_item_layout, demoDates);
+        posts = new ArrayList<Note>();
+        ArrayAdapter<Note> adapter = new ArrayAdapter<Note>(this,
+                R.layout.list_item_layout, posts);
         setListAdapter(adapter);
 
         refreshPostList();
@@ -80,12 +77,6 @@ public class MainActivity extends ListActivity {
 
             case R.id.action_new: {
                 Intent intent = new Intent(this, EditNoteActivity.class);
-                startActivity(intent);
-                break;
-            }
-
-            case R.id.notes: {
-                Intent intent = new Intent(this, NoteListActivity.class);
                 startActivity(intent);
                 break;
             }
@@ -131,16 +122,13 @@ public class MainActivity extends ListActivity {
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
-        //open new activity here
 
-//        Note note = posts.get(position);
+        Note note = posts.get(position);
         Intent intent = new Intent(this, EditNoteActivity.class);
-
-        Toast.makeText(this, l.toString(), Toast.LENGTH_SHORT).show();
-//        intent.putExtra("message", l.toString());
-//        intent.putExtra("noteTitle", note.getTitle());
-//        intent.putExtra("noteContent", note.getContent());
-//        startActivity(intent);
+        intent.putExtra("noteId", note.getId());
+        intent.putExtra("noteTitle", note.getTitle());
+        intent.putExtra("noteContent", note.getContent());
+        startActivity(intent);
 
     }
 
@@ -149,35 +137,33 @@ public class MainActivity extends ListActivity {
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Post");
         query.whereEqualTo("author", ParseUser.getCurrentUser());
 
-        //setProgressBarIndeterminateVisibility(true);
+        setProgressBarIndeterminateVisibility(true);
 
-        // fetching data from Parse.com and parsing note data
-//        query.findInBackground(new FindCallback<ParseObject>() {
-//
-//            @SuppressWarnings("unchecked")
-//            @Override
-//            public void done(List<ParseObject> postList, ParseException e) {
-//              setProgressBarIndeterminateVisibility(false);
-//                if (e == null) {
-//                    // If there are results, update the list of posts
-//                    // and notify the adapter
-//                    posts.clear();
-//                    for (ParseObject post : postList) {
-//                        Note note = new Note(post.getObjectId(),
-//                                post.getString("title"),
-//                                post.getString("content"),
-//                                post.getParseGeoPoint("parseGeoPoint"));
-//                        posts.add(note);
-//                    }
-//                    ((ArrayAdapter<Note>) getListAdapter())
-//                            .notifyDataSetChanged();
-//                } else {
-//
-//                    Log.d(getClass().getSimpleName(), "Error: " + e.getMessage());
-//                }
-//            }
-//        });
+        query.findInBackground(new FindCallback<ParseObject>() {
+
+            @SuppressWarnings("unchecked")
+            @Override
+            public void done(List<ParseObject> postList, ParseException e) {
+                setProgressBarIndeterminateVisibility(false);
+                if (e == null) {
+                    // If there are results, update the list of posts
+                    // and notify the adapter
+                    posts.clear();
+                    for (ParseObject post : postList) {
+                        Note note = new Note(post.getObjectId(),
+                                post.getString("title"),
+                                post.getString("content"),
+                                post.getParseGeoPoint("parseGeoPoint"));
+                        posts.add(note);
+                    }
+                    ((ArrayAdapter<Note>) getListAdapter())
+                            .notifyDataSetChanged();
+                } else {
+
+                    Log.d(getClass().getSimpleName(), "Error: " + e.getMessage());
+                }
+            }
+        });
 
     }
-
 }

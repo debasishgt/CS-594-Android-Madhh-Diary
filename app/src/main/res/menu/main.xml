@@ -33,6 +33,11 @@
         android:title="Pic View"
         app:showAsAction="never"/>
     <item
+        android:id="@+id/notes"
+        android:orderInCategory="100"
+        android:title="Notes"
+        app:showAsAction="never"/>
+    <item
         android:id="@+id/action_map"
         android:orderInCategory="100"
         android:title="Map View"
