@@ -1,11 +1,12 @@
 package com.madhh.diary;
 
+import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
+@ParseClassName("ImageData")
+public class ImageData extends ParseObject{
 
-public class Image extends ParseObject{
-
-    ParseFile file;
+    //ParseFile file;
     String datetime;
     //String flash;
     String gps_latitude;
@@ -18,6 +19,10 @@ public class Image extends ParseObject{
     String model;
     String orientation;
     String white_balance;
+
+    ParseFile file;
+
+    public ImageData(){};
 
     public ParseFile getFile() {
         return file;
