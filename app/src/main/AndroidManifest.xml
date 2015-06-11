@@ -74,6 +74,10 @@
             android:name=".NoteListActivity"
             android:label="@string/title_activity_note_list" >
         </activity>
+        <activity
+            android:name=".MapRetrive"
+            android:label="@string/title_activity_map_rerive" >
+        </activity>
     </application>
 
 </manifest>

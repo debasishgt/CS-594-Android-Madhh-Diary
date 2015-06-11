@@ -106,6 +106,12 @@ public class MainActivity extends ListActivity {
                 // Do something when user selects Settings from Action Bar overlay
                 break;
             }
+			case R.id.action_map_retrive: {
+				Intent mapRetive = new Intent(this, MapRetrive.class);
+				startActivity(mapRetive);
+				// Do something when user selects Settings from Action Bar overlay
+				break;
+			}
             case R.id.action_map: {
                 //Intent mapIntent = new Intent(this, MapActivity.class);
                 //startActivity(mapIntent);

@@ -42,5 +42,10 @@
         android:orderInCategory="100"
         android:title="Map View"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_map_retrive"
+        android:orderInCategory="100"
+        android:title="Map Retrive"
+        app:showAsAction="never"/>
 
 </menu>

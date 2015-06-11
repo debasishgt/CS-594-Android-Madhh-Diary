@@ -1,6 +1,7 @@
 package com.madhh.diary;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -17,9 +18,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
+import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MapActivity extends FragmentActivity {
@@ -27,7 +29,7 @@ public class MapActivity extends FragmentActivity {
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 2; // in Meters
-    private static final long MINIMUM_TIME_BETWEEN_UPDATES = 5000; // in Milliseconds
+    private static final long MINIMUM_TIME_BETWEEN_UPDATES = 10000; // in Milliseconds
     protected LocationManager locationManager;
     protected MyLocationListener myListener;
 //    protected Button locate;
@@ -37,36 +39,26 @@ public class MapActivity extends FragmentActivity {
     public double start_long;
     public double end_lat;
     public double end_long;
-    List<ParseGeoPoint> locationTrace = new ArrayList<ParseGeoPoint>();
+
+    public RouteInfo routeInfo = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         setUpMapIfNeeded();
-//        locate = (Button) findViewById(R.id.locate);
         track = (Button) findViewById(R.id.track);
         end = (Button) findViewById(R.id.end);
-//        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
         showCurrentLocation();
-//        locate.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-//
-//                showCurrentLocation();
-//            }
-//        });
 
         track.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(locationManager == null) {
+                if (locationManager == null) {
                     System.out.println("LocationManager is null");
                     locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
                 }
-                myListener = new MyLocationListener();
+
                 startTrack();
             }
         });
@@ -74,13 +66,20 @@ public class MapActivity extends FragmentActivity {
         end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+            if(locationManager !=null){
                 stopTrack();
-                mMap.clear();
-                mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
-                        .getMap();
-//                setUpMapIfNeeded();
-                showCurrentLocation();
+                Toast.makeText(MapActivity.this,
+                        "Data saving",
+                        Toast.LENGTH_LONG).show();
+                routeInfo.saveRouteInfo();
+                try {
+                    routeInfo.save();
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                routeInfo = null;
+
+            }
 
             }
         });
@@ -95,7 +94,8 @@ public class MapActivity extends FragmentActivity {
                     "New Location \n Longitude: %1$s \n Latitude: %2$s",
                     location.getLongitude(), location.getLatitude()
             );
-            locationTrace.add(new ParseGeoPoint( location.getLatitude(),location.getLongitude()));
+            routeInfo.setParseGeoPoint(new ParseGeoPoint( location.getLatitude(),location.getLongitude()));
+            connectLocations(routeInfo.getParseGeoPoint());
             end_lat = location.getLatitude();
             end_long = location.getLongitude();
             Toast.makeText(MapActivity.this, message, Toast.LENGTH_LONG).show();
@@ -206,21 +206,19 @@ public class MapActivity extends FragmentActivity {
 
     public void startTrack()
     {
+        myListener = new MyLocationListener();
+        mMap.clear();
+        routeInfo = new RouteInfo();
         Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-
-
 
         mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
                 .getMap();
 
         start_lat=location.getLatitude();
         start_long=location.getLongitude();
-        locationTrace.add(new ParseGeoPoint(start_lat,start_long));
-        System.out.println(start_lat);
-        System.out.println(start_long);
+        routeInfo.setParseGeoPoint(new ParseGeoPoint(start_lat, start_long));
 
         mMap.addMarker(new MarkerOptions().position(new LatLng(start_lat, start_long)).title("Marker").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
-
 
         CameraUpdate center= CameraUpdateFactory.newLatLng(new LatLng(start_lat,start_long));
         CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
@@ -228,7 +226,6 @@ public class MapActivity extends FragmentActivity {
         mMap.moveCamera(center);
         mMap.animateCamera(zoom);
 
-        //MyLocationListener myListener = new MyLocationListener();
         locationManager.requestLocationUpdates(
                 LocationManager.GPS_PROVIDER,
                 MINIMUM_TIME_BETWEEN_UPDATES,
@@ -239,16 +236,32 @@ public class MapActivity extends FragmentActivity {
 
      public void stopTrack()
      {
-         locationManager.removeUpdates(myListener);
-         locationManager = null;
-         System.out.println("===================List====" + locationTrace.get(1));
 
          String message = String.format(
-                 "New Locatio end locationn");
+                 "End Tracking");
          Toast.makeText(MapActivity.this, message, Toast.LENGTH_LONG).show();
+         locationManager.removeUpdates(myListener);
+         myListener = null;
+         locationManager = null;
      }
 
+    public void connectLocations(List<ParseGeoPoint> locationTrac)
+    {
+//        mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
+//                .getMap();
+//
+//        mMap.addMarker(new MarkerOptions().position(new LatLng(locationTrac.get(0).getLatitude(),locationTrac.get(0).getLongitude())).title("Marker"));
+        PolylineOptions polyLineOptions ;
+        for (int j = 0; j < locationTrac.size()-1; j++){
+            polyLineOptions = new PolylineOptions();
+            LatLng src = new LatLng(locationTrac.get(j).getLatitude(),locationTrac.get(j).getLongitude());
+            LatLng dest = new LatLng(locationTrac.get(j+1).getLatitude(),locationTrac.get(j+1).getLongitude());
+            polyLineOptions.add(new LatLng(src.latitude, src.longitude),
+                    new LatLng(dest.latitude, dest.longitude)).width(7).color(Color.BLUE).geodesic(true);
+            mMap.addPolyline(polyLineOptions);
 
+        }
+    }
 
 
 }
