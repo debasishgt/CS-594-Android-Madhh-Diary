@@ -2,6 +2,7 @@ package com.madhh.diary;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -26,6 +27,9 @@ public class MainActivity extends ListActivity {
 
   //  private List<String> posts;
 
+    private MenuItem track_menu_off;
+    private MenuItem track_menu_on;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +40,7 @@ public class MainActivity extends ListActivity {
         if (currentUser == null) {
             loadLoginView();
         }
-
+        turnTrackOff();
        // posts = new ArrayList<String>();
         //create List of Items
         String[] demoDates = {"Jan 1st", "Jan 2nd", "Jan 3rd", "Jan 4th", "Jan 5th",
@@ -49,7 +53,38 @@ public class MainActivity extends ListActivity {
 
         refreshPostList();
     }
+    public void turnTrackOff(){
+        SharedPreferences.Editor editor = getSharedPreferences("trac_pref", MODE_PRIVATE).edit();
+        editor.putString("track_state", "Off");
+        editor.commit();
+    }
+    public void turnTrackOn(){
+        SharedPreferences.Editor editor = getSharedPreferences("trac_pref", MODE_PRIVATE).edit();
+        editor.putString("track_state", "On");
+        editor.commit();
+    }
 
+    public boolean getTrackState(){
+        boolean ret = false;
+        SharedPreferences prefs = getSharedPreferences("trac_pref", MODE_PRIVATE);
+        String trackState = prefs.getString("track_state", "Off");
+
+        if(trackState.equalsIgnoreCase("On")){
+            ret = true;
+        }
+
+        return ret;
+    }
+    public void setTrackMenuButtonState(boolean state){
+        if(state) {
+            track_menu_off.setVisible(true);
+            track_menu_on.setVisible(false);
+        }
+        else {
+            track_menu_off.setVisible(false);
+            track_menu_on.setVisible(true);
+        }
+    }
     private void loadLoginView() {
         Intent intent = new Intent(this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -61,6 +96,16 @@ public class MainActivity extends ListActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        track_menu_on = menu.findItem(R.id.track_on);
+        track_menu_off = menu.findItem(R.id.track_off);
+        return true;
+    }
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        super.onPrepareOptionsMenu(menu);
+        //track_menu_on = (Button) menu.findItem(R.id.track_on);
+        //track_menu_off = (Button) menu.findItem(R.id.track_off);
+        setTrackMenuButtonState(getTrackState());
         return true;
     }
 
@@ -94,7 +139,16 @@ public class MainActivity extends ListActivity {
                 ParseUser.logOut();
                 loadLoginView();
                 break;
-
+            case R.id.track_on: {
+                // Do something when user selects Settings from Action Bar overlay
+                turnTrackOn();
+                break;
+            }
+            case R.id.track_off: {
+                // Do something when user selects Settings from Action Bar overlay
+                turnTrackOff();
+                break;
+            }
             case R.id.action_settings: {
                 // Do something when user selects Settings from Action Bar overlay
                 break;
@@ -113,8 +167,8 @@ public class MainActivity extends ListActivity {
 				break;
 			}
             case R.id.action_map: {
-                //Intent mapIntent = new Intent(this, MapActivity.class);
-                //startActivity(mapIntent);
+                Intent mapIntent = new Intent(this, MapActivity.class);
+                startActivity(mapIntent);
                 // Do something when user selects Settings from Action Bar overlay
                 //RouteInfo routeInfo = new RouteInfo();
                 //routeInfo.setDate();
