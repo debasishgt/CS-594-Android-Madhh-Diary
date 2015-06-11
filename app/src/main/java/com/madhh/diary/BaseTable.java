@@ -20,23 +20,19 @@ public class BaseTable extends ParseObject {
 
     String objectId;
     private String date;
-    private String username;
+    //private String username;
 
     public BaseTable(){
         setDate();
-        setUsername(ParseUser.getCurrentUser().getUsername());
+        setUser();
     }
     public void setObjectId(String objectId){
         this.objectId = objectId;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-        put("username", this.username);
+    public void setUser() {
+        //this.username = username;
+        put("author", ParseUser.getCurrentUser());
     }
     public Time getDate() {
         //return time;

@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="hello"
+        android:text=""
         />
     <Button
         android:id="@+id/loadimage"
@@ -15,14 +15,29 @@
         android:layout_height="wrap_content"
         android:text="Load Image"
         />
+    <Button
+        android:id="@+id/uploadimage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Image"
+        />
+    <Button
+        android:id="@+id/showimage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Image"
+        />
     <TextView
         android:id="@+id/targeturi"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         />
+
+
     <ImageView
         android:id="@+id/targetimage"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         />
+
 </LinearLayout>

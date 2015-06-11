@@ -247,20 +247,20 @@ public class EditNoteActivity extends ActionBarActivity {
 		query.findInBackground(new FindCallback<BaseTable>() {
 			@Override
 			public void done(List<BaseTable> results, ParseException e) {
-				for (BaseTable a : results) {
-					// ...
-					//Toast.makeText(getApplicationContext(), "In getParentObj", Toast.LENGTH_LONG).show();
-					String today = getToday();
-					System.out.println(today);
-					String dbDate = a.getString("date");
-					System.out.println(dbDate);
-					if (today.equals(dbDate)) {
-						//BaseTable baseTable = new BaseTable(a.getObjectId(), a.getString("date"));
-						//parentObj.add(baseTable);
-						saveRelData(a);
-						Toast.makeText(getApplicationContext(), parentObj.toString(), Toast.LENGTH_LONG).show();
-					}
+			for (BaseTable a : results) {
+				// ...
+				//Toast.makeText(getApplicationContext(), "In getParentObj", Toast.LENGTH_LONG).show();
+				String today = getToday();
+				System.out.println(today);
+				String dbDate = a.getString("date");
+				System.out.println(dbDate);
+				if (today.equals(dbDate)) {
+					//BaseTable baseTable = new BaseTable(a.getObjectId(), a.getString("date"));
+					//parentObj.add(baseTable);
+					saveRelData(a);
+					Toast.makeText(getApplicationContext(), parentObj.toString(), Toast.LENGTH_LONG).show();
 				}
+			}
 			}
 		});
 	}
