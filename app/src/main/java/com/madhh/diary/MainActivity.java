@@ -110,19 +110,19 @@ public class MainActivity extends ListActivity {
                 //Intent mapIntent = new Intent(this, MapActivity.class);
                 //startActivity(mapIntent);
                 // Do something when user selects Settings from Action Bar overlay
-                RouteInfo routeInfo = new RouteInfo();
-                routeInfo.setDate();
+                //RouteInfo routeInfo = new RouteInfo();
+                //routeInfo.setDate();
 
-                routeInfo.setParseGeoPoint(new ParseGeoPoint(34.13, -118.12));
-                routeInfo.setParseGeoPoint(new ParseGeoPoint(34.14, -118.13));
-                routeInfo.setParseGeoPoint(new ParseGeoPoint(34.15, -118.14));
-                routeInfo.saveRouteInfo();
-                try {
-                    routeInfo.save();
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                break;
+//                routeInfo.setParseGeoPoint(new ParseGeoPoint(34.13, -118.12));
+//                routeInfo.setParseGeoPoint(new ParseGeoPoint(34.14, -118.13));
+//                routeInfo.setParseGeoPoint(new ParseGeoPoint(34.15, -118.14));
+//                routeInfo.saveRouteInfo();
+//                try {
+//                    routeInfo.save();
+//                } catch (ParseException e) {
+//                    e.printStackTrace();
+//                }
+//                break;
             }
         }
 
