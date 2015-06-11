@@ -18,16 +18,16 @@
 
     <Button
         android:id="@+id/track"
-        android:text="My Track"
+        android:text="Track On"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right|top" />
 
     <Button
         android:id="@+id/end"
-        android:text="End Tarck"
+        android:text="Track Off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|top" />
+        android:layout_gravity="left|top" />
 
 </FrameLayout>

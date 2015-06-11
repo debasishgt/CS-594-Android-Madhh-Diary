@@ -40,7 +40,7 @@ public class MainActivity extends ListActivity {
         if (currentUser == null) {
             loadLoginView();
         }
-        turnTrackOff();
+        MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "Off");
        // posts = new ArrayList<String>();
         //create List of Items
         String[] demoDates = {"Jan 1st", "Jan 2nd", "Jan 3rd", "Jan 4th", "Jan 5th",
@@ -53,28 +53,9 @@ public class MainActivity extends ListActivity {
 
         refreshPostList();
     }
-    public void turnTrackOff(){
-        SharedPreferences.Editor editor = getSharedPreferences("trac_pref", MODE_PRIVATE).edit();
-        editor.putString("track_state", "Off");
-        editor.commit();
-    }
-    public void turnTrackOn(){
-        SharedPreferences.Editor editor = getSharedPreferences("trac_pref", MODE_PRIVATE).edit();
-        editor.putString("track_state", "On");
-        editor.commit();
-    }
 
-    public boolean getTrackState(){
-        boolean ret = false;
-        SharedPreferences prefs = getSharedPreferences("trac_pref", MODE_PRIVATE);
-        String trackState = prefs.getString("track_state", "Off");
 
-        if(trackState.equalsIgnoreCase("On")){
-            ret = true;
-        }
 
-        return ret;
-    }
     public void setTrackMenuButtonState(boolean state){
         if(state) {
             track_menu_off.setVisible(true);
@@ -105,7 +86,7 @@ public class MainActivity extends ListActivity {
         super.onPrepareOptionsMenu(menu);
         //track_menu_on = (Button) menu.findItem(R.id.track_on);
         //track_menu_off = (Button) menu.findItem(R.id.track_off);
-        setTrackMenuButtonState(getTrackState());
+        setTrackMenuButtonState(MadhhDiaryUtil.getMadhhDiaryUtil().getTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE)));
         return true;
     }
 
@@ -141,12 +122,12 @@ public class MainActivity extends ListActivity {
                 break;
             case R.id.track_on: {
                 // Do something when user selects Settings from Action Bar overlay
-                turnTrackOn();
+                MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "On");
                 break;
             }
             case R.id.track_off: {
                 // Do something when user selects Settings from Action Bar overlay
-                turnTrackOff();
+                MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "Off");
                 break;
             }
             case R.id.action_settings: {

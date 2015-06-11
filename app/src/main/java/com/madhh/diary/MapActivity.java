@@ -49,15 +49,16 @@ public class MapActivity extends FragmentActivity {
         track = (Button) findViewById(R.id.track);
         end = (Button) findViewById(R.id.end);
         showCurrentLocation();
-
+        //showTrackButton();
         track.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (locationManager == null) {
+//                if (locationManager == null) {
                     System.out.println("LocationManager is null");
                     locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
-                }
+                    //MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "On");
+                    //showTrackButton();
+//                }
 
                 startTrack();
             }
@@ -68,6 +69,8 @@ public class MapActivity extends FragmentActivity {
             public void onClick(View v) {
             if(locationManager !=null){
                 stopTrack();
+                //MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "On");
+                //showTrackButton();
                 Toast.makeText(MapActivity.this,
                         "Data saving",
                         Toast.LENGTH_LONG).show();
@@ -85,7 +88,18 @@ public class MapActivity extends FragmentActivity {
         });
     }
 
+    public void showTrackButton(){
+        boolean state = MadhhDiaryUtil.getMadhhDiaryUtil().getTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE));
 
+        if(state){
+            track.setVisibility(View.INVISIBLE);
+            end.setVisibility(View.VISIBLE);
+        }
+        else{
+            track.setVisibility(View.VISIBLE);
+            end.setVisibility(View.INVISIBLE);
+        }
+    }
 
     private class MyLocationListener implements LocationListener {
 

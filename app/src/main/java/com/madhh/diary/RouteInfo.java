@@ -23,13 +23,9 @@ public class RouteInfo extends BaseTable {
     private ParseGeoPoint startPoint;
     private ParseGeoPoint stopPoint;
 
-
-
     public RouteInfo(){
         super();
     };
-
-
 
     public ArrayList<ParseGeoPoint> getParseGeoPoint() {
         return parseGeoPoints;
