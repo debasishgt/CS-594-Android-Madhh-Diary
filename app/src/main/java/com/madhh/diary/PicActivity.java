@@ -39,7 +39,7 @@ public class PicActivity extends Activity {
     ImageView targetImage;
     Bitmap bitmap;
     FileInputStream fis;
-
+    Uri targetUri;
 
     /** Called when the activity is first created. */
     @Override
@@ -180,7 +180,7 @@ public class PicActivity extends Activity {
                 super.onActivityResult(requestCode, resultCode, data);
 
                 if (resultCode == RESULT_OK) {
-                    Uri targetUri = data.getData();
+                    targetUri = data.getData();
                     textTargetUri.setText(targetUri.toString());
 
                     try {
