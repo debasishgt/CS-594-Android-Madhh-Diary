@@ -9,7 +9,7 @@ public class Note {
     private String content;
     private ParseGeoPoint geoPoint;
 
-    Note(String noteId, String noteTitle, String noteContent, ParseGeoPoint Point) {
+    public Note(String noteId, String noteTitle, String noteContent, ParseGeoPoint Point) {
         id = noteId;
         title = noteTitle;
         content = noteContent;
