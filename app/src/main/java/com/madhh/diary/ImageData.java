@@ -3,8 +3,10 @@ package com.madhh.diary;
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
+import com.parse.ParseUser;
+
 @ParseClassName("ImageData")
-public class ImageData extends BaseTable{
+public class ImageData extends ParseObject{
 
     //ParseFile file;
     String datetime;
@@ -20,11 +22,17 @@ public class ImageData extends BaseTable{
     String orientation;
     String white_balance;
 
+
+
     ParseFile file;
 
     public ImageData(){
-        super();
+
     };
+
+    public void setUser(){
+        put("author", ParseUser.getCurrentUser());
+    }
 
     public ParseFile getFile() {
         return file;

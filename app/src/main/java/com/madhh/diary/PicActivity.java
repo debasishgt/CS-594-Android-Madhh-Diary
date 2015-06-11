@@ -86,21 +86,26 @@ public class PicActivity extends Activity {
         query.findInBackground(new FindCallback<ImageData>() {
             @Override
             public void done(List<ImageData> results, ParseException e) {
-                for (ImageData a : results) {
-                    ParseFile imageFile = (ParseFile) a.get("imageFile");
-                    imageFile.getDataInBackground(new GetDataCallback() {
-                        public void done(byte[] data, ParseException e) {
-                            if (e == null) {
-                                // data has the bytes for the resume
-                                //ImageView image = (ImageView) findViewById(R.id.img);
-                                Bitmap bMap = BitmapFactory.decodeByteArray(data, 0, data.length);
-                                targetImage.setImageBitmap(bMap);
+                if(results != null) {
+                    for (ImageData a : results) {
+                        ParseFile imageFile = (ParseFile) a.get("imageFile");
+                        imageFile.getDataInBackground(new GetDataCallback() {
+                            public void done(byte[] data, ParseException e) {
+                                if (e == null) {
+                                    // data has the bytes for the resume
+                                    //ImageView image = (ImageView) findViewById(R.id.img);
+                                    Bitmap bMap = BitmapFactory.decodeByteArray(data, 0, data.length);
+                                    targetImage.setImageBitmap(bMap);
 
-                            } else {
-                                // something went wrong
+                                } else {
+                                    // something went wrong
+                                }
                             }
-                        }
-                    });
+                        });
+                    }
+                }
+                else{
+                    Toast.makeText(PicActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -134,6 +139,7 @@ public class PicActivity extends Activity {
 
                     file.save();
                     ImageData imageData = (ImageData) new ImageData();
+                    imageData.setUser();
                     imageData.setFile(file);
                     imageData.save();
 

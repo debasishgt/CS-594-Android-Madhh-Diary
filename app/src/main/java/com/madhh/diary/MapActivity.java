@@ -67,22 +67,22 @@ public class MapActivity extends FragmentActivity {
         end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            if(locationManager !=null){
-                stopTrack();
-                //MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "On");
-                //showTrackButton();
-                Toast.makeText(MapActivity.this,
-                        "Data saving",
-                        Toast.LENGTH_LONG).show();
-                routeInfo.saveRouteInfo();
-                try {
-                    routeInfo.save();
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                routeInfo = null;
+                if (locationManager != null) {
+                    stopTrack();
+                    //MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "On");
+                    //showTrackButton();
+                    Toast.makeText(MapActivity.this,
+                            "Data saving",
+                            Toast.LENGTH_LONG).show();
+                    routeInfo.saveRouteInfo();
+                    try {
+                        routeInfo.save();
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    routeInfo = null;
 
-            }
+                }
 
             }
         });
@@ -223,6 +223,7 @@ public class MapActivity extends FragmentActivity {
         myListener = new MyLocationListener();
         mMap.clear();
         routeInfo = new RouteInfo();
+        routeInfo.setUser();
         Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
         mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))

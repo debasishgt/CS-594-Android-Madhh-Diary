@@ -45,6 +45,7 @@ public class RouteManager {
         myListener = new MyLocationListener();
 
         routeInfo = new RouteInfo();
+        routeInfo.setUser();
 
 
         Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);

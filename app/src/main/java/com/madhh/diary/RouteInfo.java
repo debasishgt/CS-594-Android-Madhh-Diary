@@ -15,7 +15,7 @@ import java.util.Date;
  * Created by debasish on 6/10/2015.
  */
 @ParseClassName("RouteInfo")
-public class RouteInfo extends BaseTable {
+public class RouteInfo extends ParseObject {
 
 
     private ArrayList<ParseGeoPoint> parseGeoPoints;
@@ -24,9 +24,11 @@ public class RouteInfo extends BaseTable {
     private ParseGeoPoint stopPoint;
 
     public RouteInfo(){
-        super();
-    };
 
+    };
+    public void setUser(){
+        put("author", ParseUser.getCurrentUser());
+    }
     public ArrayList<ParseGeoPoint> getParseGeoPoint() {
         return parseGeoPoints;
     }

@@ -102,7 +102,7 @@ public class NoteListActivity extends ListActivity {
                 //startActivity(mapIntent);
                 // Do something when user selects Settings from Action Bar overlay
                 RouteInfo routeInfo = new RouteInfo();
-                routeInfo.setDate();
+                routeInfo.setUser();
 
                 routeInfo.setParseGeoPoint(new ParseGeoPoint(34.13, -118.12));
                 routeInfo.setParseGeoPoint(new ParseGeoPoint(34.14, -118.13));
