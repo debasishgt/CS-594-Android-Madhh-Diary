@@ -72,13 +72,9 @@ public class RouteManager {
         myListener = null;
         locationManager = null;
         routeInfo.saveRouteInfo();
-        try {
-            routeInfo.save();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
         routeInfo = null;
     }
+
 
     private class MyLocationListener implements LocationListener {
 

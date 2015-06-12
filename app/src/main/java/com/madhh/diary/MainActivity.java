@@ -123,11 +123,13 @@ public class MainActivity extends ListActivity {
             case R.id.track_on: {
                 // Do something when user selects Settings from Action Bar overlay
                 MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "On");
+                RouteManager.getRouteManager(this).startTrack();
                 break;
             }
             case R.id.track_off: {
                 // Do something when user selects Settings from Action Bar overlay
                 MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "Off");
+                RouteManager.getRouteManager(this).stopTrack();
                 break;
             }
             case R.id.action_settings: {

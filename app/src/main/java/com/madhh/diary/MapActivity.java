@@ -75,15 +75,8 @@ public class MapActivity extends FragmentActivity {
                             "Data saving",
                             Toast.LENGTH_LONG).show();
                     routeInfo.saveRouteInfo();
-                    try {
-                        routeInfo.save();
-                    } catch (ParseException e) {
-                        e.printStackTrace();
-                    }
                     routeInfo = null;
-
                 }
-
             }
         });
     }
