@@ -49,15 +49,15 @@ public class MapActivity extends FragmentActivity {
         track = (Button) findViewById(R.id.track);
         end = (Button) findViewById(R.id.end);
         showCurrentLocation();
-        //showTrackButton();
+        showTrackButton();
         track.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                if (locationManager == null) {
                     System.out.println("LocationManager is null");
                     locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-                    //MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "On");
-                    //showTrackButton();
+                    MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "On");
+                    showTrackButton();
 //                }
 
                 startTrack();
@@ -69,8 +69,8 @@ public class MapActivity extends FragmentActivity {
             public void onClick(View v) {
                 if (locationManager != null) {
                     stopTrack();
-                    //MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "On");
-                    //showTrackButton();
+                    MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "Off");
+                    showTrackButton();
                     Toast.makeText(MapActivity.this,
                             "Data saving",
                             Toast.LENGTH_LONG).show();
