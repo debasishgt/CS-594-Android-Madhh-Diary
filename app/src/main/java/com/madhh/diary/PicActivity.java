@@ -12,10 +12,13 @@ import java.io.IOException;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.location.Location;
+import android.location.LocationManager;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -44,6 +47,7 @@ public class PicActivity extends Activity {
     Uri targetUri;
     private boolean valid = false;
     double Latitude, Longitude;
+    protected LocationManager locationManager;
 
     /** Called when the activity is first created. */
     @Override
@@ -70,7 +74,7 @@ public class PicActivity extends Activity {
             @Override
             public void onClick(View v) {
                 //Do Upload
-                uploadImage(); uploadImage();
+                uploadImage();
                 Toast.makeText(getApplicationContext(), "Upload Here", Toast.LENGTH_LONG).show();
             }
         });
@@ -92,7 +96,7 @@ public class PicActivity extends Activity {
         query.findInBackground(new FindCallback<ImageData>() {
             @Override
             public void done(List<ImageData> results, ParseException e) {
-                if(results != null) {
+                if (results != null) {
                     for (ImageData a : results) {
                         ParseFile imageFile = (ParseFile) a.get("imageFile");
                         imageFile.getDataInBackground(new GetDataCallback() {
@@ -109,8 +113,7 @@ public class PicActivity extends Activity {
                             }
                         });
                     }
-                }
-                else{
+                } else {
                     Toast.makeText(PicActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
@@ -147,8 +150,9 @@ public class PicActivity extends Activity {
             byte[] data = stream.toByteArray();
 
             ParseFile file = new ParseFile("image.JPEG", data);
-            file.save();
-            ImageData imageData = (ImageData) new ImageData();
+            //file.save();
+            ImageData imageData = new ImageData();
+            imageData.setUser();
 
             if((gps_latitude !=null)
                     && (gps_latitude_ref !=null)
@@ -169,13 +173,19 @@ public class PicActivity extends Activity {
                     Longitude = 0 - convertToDegree(gps_longitude);
                 }
             }
+            else{
+                locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+                Latitude = location.getLatitude();
+                Longitude = location.getLongitude();
+            }
 
             imageData.setFile(file);
             imageData.setGps_latitude(Latitude);
             imageData.setGps_longitude(Longitude);
             //imageData.setGps_latitude_ref(gps_latitude_ref);
             //  imageData.setGps_longitude_ref(gps_longitude_ref);
-            imageData.save();
+            imageData.saveInBackground();
 
             targetImage.setImageBitmap(null);
             //targetImage.setImageBitmap(bMap);
@@ -205,9 +215,9 @@ public class PicActivity extends Activity {
 //            Toast.makeText(this, "Error!",
 //                    Toast.LENGTH_LONG).show();
 //        }
-        catch (ParseException e) {
-            e.printStackTrace();
-        }
+//        catch (ParseException e) {
+//            e.printStackTrace();
+//        }
         catch (IOException e1){
             e1.printStackTrace();
         }
