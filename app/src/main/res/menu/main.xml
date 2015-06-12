@@ -9,16 +9,15 @@
         android:showAsAction="always|withText"
         android:title="@string/action_refresh">
     </item>
-    
+
     <item
         android:id="@+id/action_new"
         android:showAsAction="always|withText"
         android:title="@string/action_new"
         android:icon="@drawable/ic_action_new"/>
-    
     <item
-        android:id="@+id/action_logout"
-        android:title="@string/logout_label">
+        android:id="@+id/home"
+        android:title="Home">
     </item>
 
     <item
@@ -51,5 +50,8 @@
         android:orderInCategory="100"
         android:title="Map Retrive"
         app:showAsAction="never"/>
-
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/logout_label">
+    </item>
 </menu>

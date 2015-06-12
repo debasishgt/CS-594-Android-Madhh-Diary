@@ -74,6 +74,11 @@ public class NoteListActivity extends ListActivity {
                 refreshPostList();
                 break;
             }
+            case R.id.home: {
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
+            }
 
             case R.id.action_new: {
                 Intent intent = new Intent(this, EditNoteActivity.class);
@@ -87,6 +92,8 @@ public class NoteListActivity extends ListActivity {
                 break;
 
             case R.id.action_settings: {
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 // Do something when user selects Settings from Action Bar overlay
                 break;
             }

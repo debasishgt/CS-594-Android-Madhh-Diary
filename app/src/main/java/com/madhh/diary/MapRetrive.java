@@ -197,9 +197,9 @@ public class MapRetrive extends FragmentActivity implements GoogleMap.OnInfoWind
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode==RESULT_OK){
-            Intent refresh = new Intent(this, MapRetrive.class);
+            Intent refresh = getIntent();
+            finish();
             startActivity(refresh);
-            this.finish();
         }
     }
 }
