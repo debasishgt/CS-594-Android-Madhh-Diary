@@ -29,6 +29,7 @@
     <string name="title_activity_note_list">NoteListActivity</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_test_map">Map</string>
 
     <string name="title_activity_map_rerive">Map</string>
 

@@ -8,12 +8,23 @@ public class Note {
     private String title;
     private String content;
     private ParseGeoPoint geoPoint;
+    private String createdAt;
+
 
     public Note(String noteId, String noteTitle, String noteContent, ParseGeoPoint Point) {
         id = noteId;
         title = noteTitle;
         content = noteContent;
         geoPoint = Point;
+    }
+
+    public void setCreatedAt(String date)
+    {
+        this.createdAt = date;
+    }
+    public String getCreatedAt()
+    {
+        return createdAt;
     }
 
     public void setGeoPoint(ParseGeoPoint geoPoint) {
