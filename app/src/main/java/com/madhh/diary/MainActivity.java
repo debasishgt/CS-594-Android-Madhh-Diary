@@ -23,6 +23,7 @@ import com.parse.ParseUser;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
@@ -32,7 +33,7 @@ import java.util.Set;
 
 public class MainActivity extends ListActivity {
 
-  //  private List<String> posts;
+    //  private List<String> posts;
 
     private MenuItem track_menu_off;
     private MenuItem track_menu_on;
@@ -49,7 +50,7 @@ public class MainActivity extends ListActivity {
             loadLoginView();
         }
         MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "Off");
-       // posts = new ArrayList<String>();
+        // posts = new ArrayList<String>();
 
         //create List of Items
         dates = new ArrayList<String>();
@@ -58,8 +59,8 @@ public class MainActivity extends ListActivity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 R.layout.list_item_layout, demoDates);
-        setListAdapter(adapter);
-
+        //setListAdapter(adapter);
+        dates.clear();
         refreshDateList();
 
         if(dates != null)
@@ -119,6 +120,7 @@ public class MainActivity extends ListActivity {
         switch (id) {
 
             case R.id.action_refresh: {
+                dates.clear();
                 refreshDateList();
                 break;
             }
@@ -162,12 +164,12 @@ public class MainActivity extends ListActivity {
                 // Do something when user selects Settings from Action Bar overlay
                 break;
             }
-			case R.id.action_map_retrive: {
-				Intent mapRetive = new Intent(this, MapRetrive.class);
-				startActivity(mapRetive);
-				// Do something when user selects Settings from Action Bar overlay
-				break;
-			}
+            case R.id.action_map_retrive: {
+                Intent mapRetive = new Intent(this, MapRetrive.class);
+                startActivity(mapRetive);
+                // Do something when user selects Settings from Action Bar overlay
+                break;
+            }
             case R.id.action_map: {
                 Intent mapIntent = new Intent(this, MapActivity.class);
                 startActivity(mapIntent);
@@ -209,6 +211,9 @@ public class MainActivity extends ListActivity {
     //gets all the notes from the Parse DB
     private void refreshDateList() {
 
+        //fetch all dates user's created date of Post (note)
+        ParseQuery<ParseObject> queryImage = ParseQuery.getQuery("ImageData");
+        queryImage.whereEqualTo("author", ParseUser.getCurrentUser());
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Post");
         query.whereEqualTo("author", ParseUser.getCurrentUser());
 
@@ -219,24 +224,20 @@ public class MainActivity extends ListActivity {
             @SuppressWarnings("unchecked")
             @Override
             public void done(List<ParseObject> postList, ParseException e) {
-                setProgressBarIndeterminateVisibility(false);
+
+                System.out.println("done() query");
                 if (e == null) {
                     // If there are results, update the list of posts
                     // and notify the adapter
-                    dates.clear();
-                    for (ParseObject post : postList)
-                    {
-//                        System.out.println("Keys Sets: ");
-//                        for(String key: post.keySet())
-//                            System.out.println(key);
-
+                    // dates.clear();
+                    for (ParseObject post : postList) {
                         Date createdAt = post.getCreatedAt();
 
-                        if(createdAt == null)
+                        if (createdAt == null)
                             System.out.println("createdAt is Null");
                         else {
                             dates.add(dateToString(createdAt));
-                            System.out.println(dates.get(dates.size()-1));
+                            //System.out.println(dates.get(dates.size() - 1));
                         }
 
                     }
@@ -246,7 +247,41 @@ public class MainActivity extends ListActivity {
                     Log.d(getClass().getSimpleName(), "Error: " + e.getMessage());
                 }
 
-                System.out.println("dates before sorting:");
+            }
+        });
+
+        queryImage.findInBackground(new FindCallback<ParseObject>() {
+
+            @SuppressWarnings("unchecked")
+            @Override
+            public void done(List<ParseObject> postList, ParseException e) {
+                System.out.println("done() queryImage");
+
+                setProgressBarIndeterminateVisibility(false);
+                if (e == null) {
+                    // If there are results, update the list of posts
+                    // and notify the adapter
+//                    dates.clear();
+                    for (ParseObject post : postList)
+                    {
+                        Date createdAt = post.getCreatedAt();
+
+                        if(createdAt == null)
+                            System.out.println("createdAt is Null");
+                        else {
+                            dates.add(dateToString(createdAt));
+                        }
+
+                    }
+                    ((ArrayAdapter<Note>) getListAdapter())
+                            .notifyDataSetChanged();
+                } else {
+                    Log.d(getClass().getSimpleName(), "Error: " + e.getMessage());
+                }
+
+                //fetch all dates user's created date of ImageData
+
+                System.out.println("dates before sorting: size= "+dates.size());
                 for(String s: dates)
                     System.out.println(s);
                 //sort the array and then remove repeated date from the list
@@ -258,12 +293,15 @@ public class MainActivity extends ListActivity {
             }
         });
 
+
+
+
     }
 
-    // format date to string formatted: MMM/dd/yyyy
+    // format date to string formatted: EEE, MMM d, yyyy
     private String dateToString(Date date)
     {
-        DateFormat dateFormat = new SimpleDateFormat("MMM/dd/yyyy");
+        DateFormat dateFormat = new SimpleDateFormat("EEE, MMM d, yyyy");
         return dateFormat.format(date);
     }
 
@@ -284,7 +322,9 @@ public class MainActivity extends ListActivity {
 
         //sort the list
         Collections.sort(list, new Comparator<String>() {
-            DateFormat f = new SimpleDateFormat("MMM/dd/yyyy");
+            //DateFormat f = new SimpleDateFormat("MMM/dd/yyyy");
+            DateFormat f = new SimpleDateFormat("EEE, MMM d, yyyy");
+
 
             @Override
             public int compare(String o1, String o2) {
@@ -298,7 +338,7 @@ public class MainActivity extends ListActivity {
         });
 
         System.out.println("Size of the List after sort: " + list.size());
-
+        Collections.reverse(list);
         return list;
     }
 
