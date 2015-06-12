@@ -197,6 +197,8 @@ public class EditNoteActivity extends ActionBarActivity {
 			//saveRelData();
 			getParentObj();
 		}
+		setResult(RESULT_OK, null);
+		this.finish();
 	}
 	public String getToday(){
 		DateFormat dateFormat = new SimpleDateFormat("MMM/dd/yyyy");

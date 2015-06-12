@@ -184,13 +184,22 @@ public class MapRetrive extends FragmentActivity implements GoogleMap.OnInfoWind
         System.out.println(mMarkers.get(marker));
         Intent intent = new Intent(this, EditNoteActivity.class);
         intent.putExtra("noteId", mMarkers.get(marker)[0]);
-        intent.putExtra("noteTitle",mMarkers.get(marker)[1]);
-        intent.putExtra("noteContent",mMarkers.get(marker)[2]);
-        startActivity(intent);
+        intent.putExtra("noteTitle", mMarkers.get(marker)[1]);
+        intent.putExtra("noteContent", mMarkers.get(marker)[2]);
+        startActivityForResult(intent, 1);
+
         // When touch InfoWindow on the market, display another screen.
        // Intent intent = new Intent(this, Another.class);
        // startActivity(intent);
     }
 
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode==RESULT_OK){
+            Intent refresh = new Intent(this, MapRetrive.class);
+            startActivity(refresh);
+            this.finish();
+        }
+    }
 }
