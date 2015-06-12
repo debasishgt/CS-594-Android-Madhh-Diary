@@ -2,6 +2,7 @@ package com.madhh.diary;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -26,6 +27,9 @@ public class MainActivity extends ListActivity {
 
   //  private List<String> posts;
 
+    private MenuItem track_menu_off;
+    private MenuItem track_menu_on;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +40,7 @@ public class MainActivity extends ListActivity {
         if (currentUser == null) {
             loadLoginView();
         }
-
+        MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "Off");
        // posts = new ArrayList<String>();
         //create List of Items
         String[] demoDates = {"Jan 1st", "Jan 2nd", "Jan 3rd", "Jan 4th", "Jan 5th",
@@ -50,6 +54,18 @@ public class MainActivity extends ListActivity {
         refreshPostList();
     }
 
+
+
+    public void setTrackMenuButtonState(boolean state){
+        if(state) {
+            track_menu_off.setVisible(true);
+            track_menu_on.setVisible(false);
+        }
+        else {
+            track_menu_off.setVisible(false);
+            track_menu_on.setVisible(true);
+        }
+    }
     private void loadLoginView() {
         Intent intent = new Intent(this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -61,6 +77,16 @@ public class MainActivity extends ListActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        track_menu_on = menu.findItem(R.id.track_on);
+        track_menu_off = menu.findItem(R.id.track_off);
+        return true;
+    }
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        super.onPrepareOptionsMenu(menu);
+        //track_menu_on = (Button) menu.findItem(R.id.track_on);
+        //track_menu_off = (Button) menu.findItem(R.id.track_off);
+        setTrackMenuButtonState(MadhhDiaryUtil.getMadhhDiaryUtil().getTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE)));
         return true;
     }
 
@@ -94,7 +120,16 @@ public class MainActivity extends ListActivity {
                 ParseUser.logOut();
                 loadLoginView();
                 break;
-
+            case R.id.track_on: {
+                // Do something when user selects Settings from Action Bar overlay
+                MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "On");
+                break;
+            }
+            case R.id.track_off: {
+                // Do something when user selects Settings from Action Bar overlay
+                MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "Off");
+                break;
+            }
             case R.id.action_settings: {
                 // Do something when user selects Settings from Action Bar overlay
                 break;
@@ -106,23 +141,29 @@ public class MainActivity extends ListActivity {
                 // Do something when user selects Settings from Action Bar overlay
                 break;
             }
+			case R.id.action_map_retrive: {
+				Intent mapRetive = new Intent(this, MapRetrive.class);
+				startActivity(mapRetive);
+				// Do something when user selects Settings from Action Bar overlay
+				break;
+			}
             case R.id.action_map: {
-                //Intent mapIntent = new Intent(this, MapActivity.class);
-                //startActivity(mapIntent);
+                Intent mapIntent = new Intent(this, MapActivity.class);
+                startActivity(mapIntent);
                 // Do something when user selects Settings from Action Bar overlay
-                RouteInfo routeInfo = new RouteInfo();
-                routeInfo.setDate();
+                //RouteInfo routeInfo = new RouteInfo();
+                //routeInfo.setDate();
 
-                routeInfo.setParseGeoPoint(new ParseGeoPoint(34.13, -118.12));
-                routeInfo.setParseGeoPoint(new ParseGeoPoint(34.14, -118.13));
-                routeInfo.setParseGeoPoint(new ParseGeoPoint(34.15, -118.14));
-                routeInfo.saveRouteInfo();
-                try {
-                    routeInfo.save();
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                break;
+//                routeInfo.setParseGeoPoint(new ParseGeoPoint(34.13, -118.12));
+//                routeInfo.setParseGeoPoint(new ParseGeoPoint(34.14, -118.13));
+//                routeInfo.setParseGeoPoint(new ParseGeoPoint(34.15, -118.14));
+//                routeInfo.saveRouteInfo();
+//                try {
+//                    routeInfo.save();
+//                } catch (ParseException e) {
+//                    e.printStackTrace();
+//                }
+//                break;
             }
         }
 

@@ -1,6 +1,7 @@
 package com.madhh.diary;
 
 import com.parse.ParseClassName;
+import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
@@ -40,6 +41,12 @@ public class RouteInfo extends ParseObject {
     }
     public void saveRouteInfo() {
         put("route", parseGeoPoints);
+        try {
+            this.save();
+        }
+        catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     public ParseGeoPoint getStartPoint() {
