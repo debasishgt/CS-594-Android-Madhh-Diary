@@ -32,6 +32,7 @@
     <string name="title_activity_test_map">Map</string>
 
     <string name="title_activity_map_rerive">Map</string>
+    <string name="title_activity_pic_display">PicDisplayActivity</string>
 
 
 </resources>

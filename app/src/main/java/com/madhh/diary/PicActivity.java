@@ -145,6 +145,8 @@ public class PicActivity extends Activity {
             ExifInterface exif;
             String path = getImagePath(targetUri,this);
             exif = new ExifInterface(path);
+            String[] bits = targetUri.toString().split("/");
+            String picName = bits[bits.length-1];
             String gps_latitude = getTagString(ExifInterface.TAG_GPS_LATITUDE, exif);
             String gps_latitude_ref = getTagString(ExifInterface.TAG_GPS_LATITUDE_REF, exif);
             String gps_longitude = getTagString(ExifInterface.TAG_GPS_LONGITUDE, exif);
@@ -157,6 +159,7 @@ public class PicActivity extends Activity {
             //file.save();
             ImageData imageData = new ImageData();
             imageData.setUser();
+            imageData.setPicName(picName);
 
             if((gps_latitude !=null)
                     && (gps_latitude_ref !=null)

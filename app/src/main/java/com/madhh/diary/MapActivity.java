@@ -1,12 +1,15 @@
 package com.madhh.diary;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -31,7 +34,7 @@ public class MapActivity extends FragmentActivity {
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 2; // in Meters
     private static final long MINIMUM_TIME_BETWEEN_UPDATES = 10000; // in Milliseconds
     protected LocationManager locationManager;
-    protected MyLocationListener myListener;
+    //protected MyLocationListener myListener;
 //    protected Button locate;
     protected Button track;
     protected Button end;
@@ -40,7 +43,7 @@ public class MapActivity extends FragmentActivity {
     public double end_lat;
     public double end_long;
 
-    public RouteInfo routeInfo = null;
+    //public RouteInfo routeInfo = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,12 +58,13 @@ public class MapActivity extends FragmentActivity {
             public void onClick(View v) {
 //                if (locationManager == null) {
                     System.out.println("LocationManager is null");
-                    locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                    //locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                    RouteManager.getRouteManager(getApplicationContext()).startTrack();
                     MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "On");
                     showTrackButton();
 //                }
 
-                startTrack();
+                //startTrack();
             }
         });
 
@@ -68,19 +72,44 @@ public class MapActivity extends FragmentActivity {
             @Override
             public void onClick(View v) {
                 if (locationManager != null) {
-                    stopTrack();
+                    //stopTrack();
+                    RouteManager.getRouteManager(getApplicationContext()).stopTrack();
                     MadhhDiaryUtil.getMadhhDiaryUtil().toggleTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE), "Off");
                     showTrackButton();
                     Toast.makeText(MapActivity.this,
                             "Data saving",
                             Toast.LENGTH_LONG).show();
-                    routeInfo.saveRouteInfo();
-                    routeInfo = null;
+                    //routeInfo.saveRouteInfo();
+                    //routeInfo = null;
                 }
             }
         });
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_note_list, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        switch (id) {
+
+            case R.id.action_settings: {
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
+            }
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
     public void showTrackButton(){
         boolean state = MadhhDiaryUtil.getMadhhDiaryUtil().getTrackState(getSharedPreferences("trac_pref", MODE_PRIVATE));
 
@@ -94,40 +123,40 @@ public class MapActivity extends FragmentActivity {
         }
     }
 
-    private class MyLocationListener implements LocationListener {
-
-        public void onLocationChanged(Location location) {
-            String message = String.format(
-                    "New Location \n Longitude: %1$s \n Latitude: %2$s",
-                    location.getLongitude(), location.getLatitude()
-            );
-            routeInfo.setParseGeoPoint(new ParseGeoPoint( location.getLatitude(),location.getLongitude()));
-            connectLocations(routeInfo.getParseGeoPoint());
-            end_lat = location.getLatitude();
-            end_long = location.getLongitude();
-            Toast.makeText(MapActivity.this, message, Toast.LENGTH_LONG).show();
-
-        }
-
-        public void onStatusChanged(String s, int i, Bundle b) {
-            Toast.makeText(MapActivity.this, "Provider status changed",
-                    Toast.LENGTH_LONG).show();
-
-        }
-
-        public void onProviderDisabled(String s) {
-            Toast.makeText(MapActivity.this,
-                    "Provider disabled by the user. GPS turned off",
-                    Toast.LENGTH_LONG).show();
-        }
-
-        public void onProviderEnabled(String s) {
-            Toast.makeText(MapActivity.this,
-                    "Provider enabled by the user. GPS turned on",
-                    Toast.LENGTH_LONG).show();
-        }
-
-    }
+//    private class MyLocationListener implements LocationListener {
+//
+//        public void onLocationChanged(Location location) {
+//            String message = String.format(
+//                    "New Location \n Longitude: %1$s \n Latitude: %2$s",
+//                    location.getLongitude(), location.getLatitude()
+//            );
+//            routeInfo.setParseGeoPoint(new ParseGeoPoint( location.getLatitude(),location.getLongitude()));
+//            connectLocations(routeInfo.getParseGeoPoint());
+//            end_lat = location.getLatitude();
+//            end_long = location.getLongitude();
+//            Toast.makeText(MapActivity.this, message, Toast.LENGTH_LONG).show();
+//
+//        }
+//
+//        public void onStatusChanged(String s, int i, Bundle b) {
+//            Toast.makeText(MapActivity.this, "Provider status changed",
+//                    Toast.LENGTH_LONG).show();
+//
+//        }
+//
+//        public void onProviderDisabled(String s) {
+//            Toast.makeText(MapActivity.this,
+//                    "Provider disabled by the user. GPS turned off",
+//                    Toast.LENGTH_LONG).show();
+//        }
+//
+//        public void onProviderEnabled(String s) {
+//            Toast.makeText(MapActivity.this,
+//                    "Provider enabled by the user. GPS turned on",
+//                    Toast.LENGTH_LONG).show();
+//        }
+//
+//    }
 
 
 
@@ -211,47 +240,47 @@ public class MapActivity extends FragmentActivity {
         }
     }
 
-    public void startTrack()
-    {
-        myListener = new MyLocationListener();
-        mMap.clear();
-        routeInfo = new RouteInfo();
-        routeInfo.setUser();
-        Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-
-        mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
-                .getMap();
-
-        start_lat=location.getLatitude();
-        start_long=location.getLongitude();
-        routeInfo.setParseGeoPoint(new ParseGeoPoint(start_lat, start_long));
-
-        mMap.addMarker(new MarkerOptions().position(new LatLng(start_lat, start_long)).title("Marker").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
-
-        CameraUpdate center= CameraUpdateFactory.newLatLng(new LatLng(start_lat,start_long));
-        CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
-
-        mMap.moveCamera(center);
-        mMap.animateCamera(zoom);
-
-        locationManager.requestLocationUpdates(
-                LocationManager.GPS_PROVIDER,
-                MINIMUM_TIME_BETWEEN_UPDATES,
-                MINIMUM_DISTANCE_CHANGE_FOR_UPDATES,
-                myListener
-        );
-    }
-
-     public void stopTrack()
-     {
-
-         String message = String.format(
-                 "End Tracking");
-         Toast.makeText(MapActivity.this, message, Toast.LENGTH_LONG).show();
-         locationManager.removeUpdates(myListener);
-         myListener = null;
-         locationManager = null;
-     }
+//    public void startTrack()
+//    {
+//        myListener = new MyLocationListener();
+//        mMap.clear();
+//        routeInfo = new RouteInfo();
+//        routeInfo.setUser();
+//        Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+//
+//        mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
+//                .getMap();
+//
+//        start_lat=location.getLatitude();
+//        start_long=location.getLongitude();
+//        routeInfo.setParseGeoPoint(new ParseGeoPoint(start_lat, start_long));
+//
+//        mMap.addMarker(new MarkerOptions().position(new LatLng(start_lat, start_long)).title("Marker").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+//
+//        CameraUpdate center= CameraUpdateFactory.newLatLng(new LatLng(start_lat,start_long));
+//        CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
+//
+//        mMap.moveCamera(center);
+//        mMap.animateCamera(zoom);
+//
+//        locationManager.requestLocationUpdates(
+//                LocationManager.GPS_PROVIDER,
+//                MINIMUM_TIME_BETWEEN_UPDATES,
+//                MINIMUM_DISTANCE_CHANGE_FOR_UPDATES,
+//                myListener
+//        );
+//    }
+//
+//     public void stopTrack()
+//     {
+//
+//         String message = String.format(
+//                 "End Tracking");
+//         Toast.makeText(MapActivity.this, message, Toast.LENGTH_LONG).show();
+//         locationManager.removeUpdates(myListener);
+//         myListener = null;
+//         locationManager = null;
+//     }
 
     public void connectLocations(List<ParseGeoPoint> locationTrac)
     {

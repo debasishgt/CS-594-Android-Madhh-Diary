@@ -65,6 +65,7 @@ public class MainActivity extends ListActivity {
 
         if(dates != null)
         {
+            dates = removeDuplicate(dates);
             adapter = new ArrayAdapter<String>(this, R.layout.list_item_layout, dates);
             setListAdapter(adapter);
         }
@@ -73,8 +74,6 @@ public class MainActivity extends ListActivity {
             System.out.println("dates list is null");
         }
     }
-
-
 
     public void setTrackMenuButtonState(boolean state){
         if(state) {
@@ -122,6 +121,7 @@ public class MainActivity extends ListActivity {
             case R.id.action_refresh: {
                 dates.clear();
                 refreshDateList();
+                dates = removeDuplicate(dates);
                 break;
             }
 
@@ -198,13 +198,15 @@ public class MainActivity extends ListActivity {
         //open new activity here
 
 //        Note note = posts.get(position);
-        Intent intent = new Intent(this, EditNoteActivity.class);
-
-        Toast.makeText(this, l.toString(), Toast.LENGTH_SHORT).show();
+        String dateStr = dates.get(position);
+        Intent intent = new Intent(this, MapRetrive.class);
+        intent.putExtra("date", dateStr);
+        //System.out.println("Toast: " + dateStr);
+        //Toast.makeText(this, dateStr, Toast.LENGTH_SHORT).show();
 //        intent.putExtra("message", l.toString());
 //        intent.putExtra("noteTitle", note.getTitle());
 //        intent.putExtra("noteContent", note.getContent());
-//        startActivity(intent);
+        startActivity(intent);
 
     }
 
@@ -212,8 +214,6 @@ public class MainActivity extends ListActivity {
     private void refreshDateList() {
 
         //fetch all dates user's created date of Post (note)
-        ParseQuery<ParseObject> queryImage = ParseQuery.getQuery("ImageData");
-        queryImage.whereEqualTo("author", ParseUser.getCurrentUser());
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Post");
         query.whereEqualTo("author", ParseUser.getCurrentUser());
 
@@ -229,7 +229,7 @@ public class MainActivity extends ListActivity {
                 if (e == null) {
                     // If there are results, update the list of posts
                     // and notify the adapter
-                    // dates.clear();
+                    dates.clear();
                     for (ParseObject post : postList) {
                         Date createdAt = post.getCreatedAt();
 
@@ -241,7 +241,8 @@ public class MainActivity extends ListActivity {
                         }
 
                     }
-                    ((ArrayAdapter<Note>) getListAdapter())
+                    dates = removeDuplicate(dates);
+                    ((ArrayAdapter<String>) getListAdapter())
                             .notifyDataSetChanged();
                 } else {
                     Log.d(getClass().getSimpleName(), "Error: " + e.getMessage());
@@ -249,6 +250,9 @@ public class MainActivity extends ListActivity {
 
             }
         });
+
+        ParseQuery<ParseObject> queryImage = ParseQuery.getQuery("ImageData");
+        queryImage.whereEqualTo("author", ParseUser.getCurrentUser());
 
         queryImage.findInBackground(new FindCallback<ParseObject>() {
 
@@ -262,8 +266,7 @@ public class MainActivity extends ListActivity {
                     // If there are results, update the list of posts
                     // and notify the adapter
 //                    dates.clear();
-                    for (ParseObject post : postList)
-                    {
+                    for (ParseObject post : postList) {
                         Date createdAt = post.getCreatedAt();
 
                         if(createdAt == null)
@@ -273,7 +276,8 @@ public class MainActivity extends ListActivity {
                         }
 
                     }
-                    ((ArrayAdapter<Note>) getListAdapter())
+                    dates = removeDuplicate(dates);
+                    ((ArrayAdapter<String>) getListAdapter())
                             .notifyDataSetChanged();
                 } else {
                     Log.d(getClass().getSimpleName(), "Error: " + e.getMessage());
@@ -288,12 +292,13 @@ public class MainActivity extends ListActivity {
                 //removing repeated date string from List
                 dates = removeDuplicate(dates);
 
+                ((ArrayAdapter<String>) getListAdapter())
+                        .notifyDataSetChanged();
+
                 System.out.println("After sorting: size= " + dates.size());
 
             }
         });
-
-
 
 
     }
@@ -324,7 +329,6 @@ public class MainActivity extends ListActivity {
         Collections.sort(list, new Comparator<String>() {
             //DateFormat f = new SimpleDateFormat("MMM/dd/yyyy");
             DateFormat f = new SimpleDateFormat("EEE, MMM d, yyyy");
-
 
             @Override
             public int compare(String o1, String o2) {

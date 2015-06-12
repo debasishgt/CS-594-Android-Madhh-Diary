@@ -14,6 +14,17 @@ public class ImageData extends ParseObject{
     double gps_latitude;
     //String gps_latitude_ref;
     double gps_longitude;
+
+    public String getPicName() {
+        return picName;
+    }
+
+    public void setPicName(String picName) {
+        this.picName = picName;
+        put("picName", this.picName);
+    }
+
+    String picName;
     //String gps_longitude_ref;
     //String img_length;
     //String img_width;
