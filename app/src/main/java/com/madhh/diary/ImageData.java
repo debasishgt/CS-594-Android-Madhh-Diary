@@ -11,18 +11,16 @@ public class ImageData extends ParseObject{
     //ParseFile file;
     String datetime;
     //String flash;
-    String gps_latitude;
-    //String gps_latitude_ref;
-    String gps_longitude;
-    //String gps_longitude_ref;
+    double gps_latitude;
+    String gps_latitude_ref;
+    double gps_longitude;
+    String gps_longitude_ref;
     String img_length;
     String img_width;
     String make;
     String model;
     String orientation;
     String white_balance;
-
-
 
     ParseFile file;
 
@@ -52,20 +50,36 @@ public class ImageData extends ParseObject{
         put("datetime",datetime);
     }
 
-    public String getGps_latitude() {
+    public double getGps_latitude() {
         return gps_latitude;
     }
 
-    public void setGps_latitude(String gps_latitude) {
+    public void setGps_latitude(double gps_latitude) {
         //this.gps_latitude = gps_latitude;
         put("gps_latitude",gps_latitude);
     }
 
-    public String getGps_longitude() {
+    public double getGps_longitude() {
         return gps_longitude;
     }
 
-    public void setGps_longitude(String gps_longitude) {
+    public String getGps_latitude_ref() {
+        return gps_latitude_ref;
+    }
+
+    public void setGps_latitude_ref(String gps_latitude_ref) {
+        put("gps_latitude_ref",gps_latitude_ref);
+    }
+
+    public String getGps_longitude_ref() {
+        return gps_longitude_ref;
+    }
+
+    public void setGps_longitude_ref(String gps_longitude_ref) {
+        put("gps_longitude_ref",gps_longitude_ref);
+    }
+
+    public void setGps_longitude(double gps_longitude) {
         //this.gps_longitude = gps_longitude;
         put("gps_longitude",gps_longitude);
     }
@@ -101,8 +115,7 @@ public class ImageData extends ParseObject{
         return make;
     }
 
-    public void setMake(String make) {
-        //this.make = make;
+    public void setMake(String make) {//this.make = make;
         put("make",make);
     }
 
