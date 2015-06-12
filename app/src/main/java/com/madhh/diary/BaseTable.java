@@ -46,6 +46,7 @@ public class BaseTable extends ParseObject {
         addAll("events", Arrays.asList(event));
         //put("events", event);
     }
+    //returns the formated current date in string
     public String getToday(){
         DateFormat dateFormat = new SimpleDateFormat("MMM/dd/yyyy");
         Date date = new Date();
